@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /assets/files/
 
-Sitemap: https://rilac.github.io/portfolio/sitemap.xml
+Sitemap: https://rilac.github.io/Portfolio/sitemap.xml

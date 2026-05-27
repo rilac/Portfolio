@@ -37,8 +37,10 @@ python3 -m http.server 8000
 
 ## 배포
 
-GitHub Pages에서 루트 디렉터리를 배포 대상으로 설정하면 됩니다. 배포 도메인이 확정되면 5개 HTML과 `robots.txt`, `sitemap.xml`의 `https://rilac.github.io/portfolio/` URL을 실제 도메인으로 일괄 치환하세요.
+GitHub Pages에서 배포 중입니다: <https://rilac.github.io/Portfolio/>
+
+레포 이름이 바뀌거나 커스텀 도메인을 연결하면 5개 HTML과 `robots.txt`, `sitemap.xml`의 URL을 일괄 치환하세요:
 
 ```bash
-grep -rl "rilac.github.io/portfolio" . | xargs sed -i '' 's|rilac.github.io/portfolio|실제도메인|g'
+grep -rl "rilac.github.io/Portfolio" . | xargs sed -i '' 's|rilac.github.io/Portfolio|실제도메인|g'
 ```
