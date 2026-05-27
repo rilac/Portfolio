@@ -68,29 +68,69 @@
             </div>
           </div>
           <aside class="card detail-summary reveal">
-            <div class="metric"><strong>20명</strong><span class="muted">스터디 규모</span></div>
-            <div class="metric"><strong>공동 리더</strong><span class="muted">운영 및 강의 담당</span></div>
+            <div class="metric"><strong>약 20명</strong><span class="muted">스터디 규모</span></div>
+            <div class="metric"><strong>공동 리더</strong><span class="muted">실습 코드 · 강의 영상 담당</span></div>
             <ul class="chip-list" role="list">
-              <li class="chip">Spring Boot</li>
-              <li class="chip">Java</li>
-              <li class="chip">Backend</li>
-              <li class="chip">Lecture</li>
-              <li class="chip">Study</li>
+              <li class="chip">Java 21</li>
+              <li class="chip">Spring Boot 4.0</li>
+              <li class="chip">Spring Web MVC</li>
+              <li class="chip">Spring Data JPA</li>
+              <li class="chip">Lombok</li>
+              <li class="chip">Gradle</li>
             </ul>
           </aside>
         </div>
       </section>
 
       <section class="detail-section">
-        <div class="container detail-grid">
+        <div class="container detail-stack">
+
           <article class="card value-card reveal">
-            <h2>주요 활동</h2>
+            <h2>운영 구조 — 2인 팀장 협업 모델</h2>
+            <p>콘텐츠 제작과 학습 가이드를 두 팀장이 분리 담당하는 구조로 운영했습니다. 학습자는 <strong>"명세서를 읽고 → 직접 구현 → 강의 영상으로 풀이 검증"</strong>의 학습 사이클을 매주 반복합니다.</p>
+            <div class="role-split">
+              <div class="role-col">
+                <p class="eyebrow">다른 팀장</p>
+                <ul class="point-list">
+                  <li>스터디 전용 웹사이트 구축·배포</li>
+                  <li>주차별 명세서 작성·게시</li>
+                  <li>스터디원 GitHub PR 확인·피드백</li>
+                </ul>
+              </div>
+              <div class="role-col role-col-mine">
+                <p class="eyebrow">본인</p>
+                <ul class="point-list">
+                  <li><strong>명세서 기반 실습 코드 구현</strong></li>
+                  <li><strong>YouTube 강의 영상 제작·녹화·업로드</strong></li>
+                  <li>사이트에 영상 링크 게시</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="card value-card reveal">
+            <h2>강의용 실습 프로젝트 (SPRING-LECTURE)</h2>
+            <p>YouTube 강의 영상에서 사용되는 레퍼런스 구현체입니다. 학습자가 명세서대로 직접 만들어본 뒤 비교·참고할 수 있도록 가독성·구조 명확성을 최우선으로 작성했습니다.</p>
+
+            <h3 class="detail-h3">도메인 분리 구조 (DDD-lite)</h3>
+            <pre class="code-block">com.practice
+├── domain
+│   ├── hello   ← 워밍업 (가장 단순한 Controller-Service)
+│   ├── member  ← 회원 CRUD (Entity-Repository-Service-Controller-DTO)
+│   ├── post    ← 게시글 CRUD (인메모리 → JPA로 확장하는 시연용)
+│   └── auth    ← 세션 기반 인증 (SessionManager로 직접 구현)
+└── global
+    ├── exception   ← CustomException + ErrorCode enum + GlobalExceptionHandler
+    └── response    ← ErrorResponse 통일 포맷</pre>
+
+            <h3 class="detail-h3">의도적 설계 선택</h3>
             <ul class="point-list">
-              <li>2명의 팀장 중 한 명으로 스터디 운영 방향과 학습 흐름을 조율했습니다.</li>
-              <li>Spring Boot 핵심 개념을 실습 코드와 함께 설명하는 강의 영상을 제작했습니다.</li>
-              <li>참여자가 직접 따라 할 수 있도록 예제 중심의 코드 저장소를 관리했습니다.</li>
+              <li><strong><code>PostEntity</code>를 <code>static Long AUTO_INCREMENT</code>로 시작 → 이후 회차에서 JPA로 전환</strong> — 점진적 학습 동선을 코드 자체에 반영했습니다.</li>
+              <li><strong><code>SessionManager</code>를 <code>ConcurrentHashMap</code>으로 직접 구현</strong> — Spring Security를 도입하기 전, "세션이라는 게 결국 무엇인지"를 코드 레벨에서 이해하도록 유도했습니다.</li>
+              <li><strong><code>ErrorCode</code> enum을 도메인별 prefix(<code>AUTH_001</code>, <code>POST-001</code>)로 분리</strong> — 에러 추적·문서화·확장이 쉬운 패턴을 처음부터 체화하게 했습니다.</li>
             </ul>
           </article>
+
           <article class="card value-card reveal">
             <h2>회차별 강의 · 명세서</h2>
             <p>강의를 준비하며 막연히 알고 있던 개념을 다른 사람이 이해할 수 있는 순서로 재구성했습니다. 의존성 주입, MVC 흐름, 계층 분리 같은 기본기를 카메라 앞에서 설명하는 과정에서 빈틈이 매번 드러났고, 그 과정을 영상과 명세서로 함께 남겼습니다.</p>
@@ -147,6 +187,21 @@
               </li>
             </ul>
           </article>
+
+          <article class="card value-card reveal">
+            <h2>깨달은 점</h2>
+            <ol class="lessons">
+              <li>
+                <h3>"가르치는 것"이 가장 강력한 학습 도구임을 체감했습니다.</h3>
+                <p>강의 영상을 찍기 위해 같은 코드를 두세 번 다시 작성하고, "왜 이 어노테이션을 여기에 붙이는가"를 카메라 앞에서 설명하는 과정에서 막연히 알던 개념의 빈틈이 매번 드러났습니다. <code>@Transactional</code>이 작동하는 프록시 메커니즘, 세션이 결국 메모리 위의 Map이라는 사실, <code>@RestControllerAdvice</code>가 어느 시점에 동작하는지 — 모두 강의를 준비하면서 비로소 명확해진 것들이었습니다.</p>
+              </li>
+              <li>
+                <h3>레퍼런스 코드의 품질 기준이 달라졌습니다.</h3>
+                <p>혼자 쓰는 코드와 20명이 따라 짤 코드는 요구되는 품질의 결이 다릅니다. 변수명 하나, 메서드 분리 하나, 패키지 구조 하나가 모두 학습자의 첫인상에 직결된다는 걸 체감하면서, 평소 작성하는 코드의 가독성·일관성·확장성에 대한 기준이 한 단계 올라갔습니다.</p>
+              </li>
+            </ol>
+          </article>
+
         </div>
       </section>
     </main>

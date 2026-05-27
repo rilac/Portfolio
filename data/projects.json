@@ -21,20 +21,20 @@
   {
     "id": "ssafy-spring-study",
     "title": "SSAFY Spring 스터디",
-    "tagline": "20명 규모 Spring Boot 자율 스터디 공동 리더 및 강의 담당",
-    "period": "2026.03 ~",
-    "role": "공동 리더 · 강의 콘텐츠 제작",
-    "context": "SSAFY 15기 학습 커뮤니티 운영",
-    "stack": ["Spring Boot", "Java", "Backend", "Lecture", "Study"],
+    "tagline": "약 20명 규모 Spring Boot 자율 스터디 공동 리더 — 실습 코드 + 강의 영상 제작 담당",
+    "period": "2026.03 ~ (진행 중)",
+    "role": "공동 리더 · 실습 코드 · 강의 영상 제작",
+    "context": "SSAFY 15기 학습 커뮤니티",
+    "stack": ["Java 21", "Spring Boot 4.0", "Spring Data JPA", "Lombok", "Gradle"],
     "repo": "https://github.com/SSAFY-SPRING-STUDY/DaeYeon",
     "demo": "https://www.ssafy-study.site/studies/1",
     "slidesPath": null,
     "detailPath": "projects/ssafy-spring-study.html",
     "code": "LEARN -> TEACH",
     "highlights": [
-      "2명의 팀장 중 한 명으로 스터디 운영 및 커리큘럼 조율",
-      "강의 영상 제작과 실습 코드 구현 전담",
-      "Spring Boot 핵심 개념을 예제 중심으로 설명하는 자료 제작"
+      "2인 팀장 모델 — 실습 코드 구현 + YouTube 강의 영상 5건 제작·업로드 담당",
+      "SPRING-LECTURE 레퍼런스 코드 — DDD-lite 도메인 분리 + 회차별 점진적 학습 동선 설계",
+      "AUTH/POST prefix 기반 ErrorCode enum과 GlobalExceptionHandler로 일관된 응답 포맷 체화"
     ]
   },
   {
