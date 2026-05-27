@@ -151,6 +151,9 @@ Temporary Items
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij,macos
 # Notion 원본 자료 (사이트가 직접 참조하지 않음 — 로컬 보관용)
+# macOS NFD/NFC 인코딩 차이를 우회하기 위해 wildcard 사용
+/안녕*/
+/안녕*.pdf
 안녕하세요, 임대연입니다! 👋/
 안녕하세요, 임대연입니다! 👋*.pdf
 
