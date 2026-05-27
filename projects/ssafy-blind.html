@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SSAFY 교육생 전용 익명 커뮤니티 플랫폼 SSAFY BLIND 프로젝트 상세 페이지입니다.">
+    <meta name="theme-color" content="#2563eb" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)">
+    <link rel="canonical" href="https://rilac.github.io/portfolio/projects/ssafy-blind.html">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://rilac.github.io/portfolio/projects/ssafy-blind.html">
+    <meta property="og:title" content="SSAFY BLIND | 임대연 포트폴리오">
+    <meta property="og:description" content="Spring Boot 3 · Spring Security · JWT(HttpOnly Cookie) 기반 익명 커뮤니티 풀스택 사이드 프로젝트.">
+    <meta property="og:image" content="https://rilac.github.io/portfolio/assets/img/profile.jpg">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="임대연 포트폴리오">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SSAFY BLIND | 임대연 포트폴리오">
+    <meta name="twitter:description" content="Spring Boot 3 · Spring Security · JWT 기반 익명 커뮤니티 풀스택 사이드 프로젝트.">
+    <meta name="twitter:image" content="https://rilac.github.io/portfolio/assets/img/profile.jpg">
+    <title>SSAFY BLIND | 임대연 포트폴리오</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <script>
+      (function () {
+        var stored = localStorage.getItem("theme");
+        var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="../index.html#home"><span class="brand-mark">DY</span><span>임대연</span></a>
+        <nav id="primary-nav" class="site-nav" aria-label="주요 메뉴">
+          <ul class="nav-links">
+            <li><a class="nav-link" href="../index.html#about">About</a></li>
+            <li><a class="nav-link" href="../index.html#skills">Skills</a></li>
+            <li><a class="nav-link is-active" href="../index.html#projects" aria-current="page">Projects</a></li>
+            <li><a class="nav-link" href="../index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button class="icon-button" type="button" data-theme-toggle aria-label="다크 모드로 전환" aria-pressed="false"></button>
+          <button class="icon-button menu-toggle" type="button" data-menu-toggle aria-label="메뉴 열기" aria-controls="primary-nav" aria-expanded="false">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="project-detail-hero">
+        <div class="container detail-hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Personal Full-stack Project</p>
+            <h1>SSAFY BLIND</h1>
+            <p class="lead">SSAFY 교육생만 참여할 수 있는 익명 커뮤니티 플랫폼입니다. 인증 흐름, 예외 처리, 보안 설정, 프론트엔드 연동까지 개인 프로젝트로 구현했습니다.</p>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="https://github.com/rilac/SSAFY_BLIND" target="_blank" rel="noreferrer">GitHub 보기</a>
+              <a class="btn" href="../index.html#projects">목록으로</a>
+            </div>
+          </div>
+          <aside class="card detail-summary reveal">
+            <div class="metric"><strong>2026.03 ~</strong><span class="muted">개발 중</span></div>
+            <div class="metric"><strong>개인</strong><span class="muted">풀스택 사이드 프로젝트</span></div>
+            <ul class="chip-list" role="list">
+              <li class="chip">Spring Boot 3</li>
+              <li class="chip">Spring Security</li>
+              <li class="chip">JPA</li>
+              <li class="chip">JWT</li>
+              <li class="chip">React</li>
+              <li class="chip">Vite</li>
+              <li class="chip">TailwindCSS</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <div class="container detail-grid">
+          <article class="card value-card reveal">
+            <h2>핵심 구현</h2>
+            <ul class="point-list">
+              <li>Mattermost API를 프록시해 SSAFY 교육생 인증 흐름을 구성했습니다.</li>
+              <li>JWT를 HttpOnly Cookie로 관리해 클라이언트 노출 위험을 줄이는 인증 구조를 적용했습니다.</li>
+              <li>@RestControllerAdvice 기반 글로벌 예외 처리로 API 응답 형식을 일관되게 정리했습니다.</li>
+              <li>Spring Security 인증 필터와 AOP 기반 트랜잭션 흐름을 디버깅하며 동작 원리를 검증했습니다.</li>
+            </ul>
+          </article>
+          <article class="card value-card reveal">
+            <h2>배운 점</h2>
+            <p>단순 CRUD보다 인증과 보안 흐름이 서비스 신뢰도에 더 큰 영향을 준다는 점을 체감했습니다. 특히 쿠키 기반 JWT와 Spring Security 필터 체인을 연결하면서 요청이 컨트롤러에 도달하기 전 어떤 순서로 검증되는지 명확히 이해하게 되었습니다.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 임대연 · Built with HTML, CSS and Vanilla JavaScript · Last updated <time datetime="2026-05-27">2026.05.27</time></p>
+        <a href="../index.html#projects">← 프로젝트 목록</a>
+      </div>
+    </footer>
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/nav.js"></script>
+    <script src="../assets/js/animations.js"></script>
+  </body>
+</html>

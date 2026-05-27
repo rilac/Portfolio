@@ -1,0 +1,78 @@
+[
+  {
+    "id": "ssafy-blind",
+    "title": "SSAFY BLIND",
+    "tagline": "SSAFY 교육생만 참여할 수 있는 익명 커뮤니티 플랫폼",
+    "period": "2026.03 ~ (개발 중)",
+    "role": "개인 프로젝트 (풀스택)",
+    "context": "SSAFY 15기 교육 기간 중 사이드 프로젝트",
+    "stack": ["Spring Boot 3", "Spring Security", "JPA", "JWT", "React", "Vite", "TailwindCSS"],
+    "repo": "https://github.com/rilac/SSAFY_BLIND",
+    "demo": null,
+    "slidesPath": null,
+    "detailPath": "projects/ssafy-blind.html",
+    "code": "JWT + AOP",
+    "highlights": [
+      "Mattermost API 프록시와 JWT(HttpOnly Cookie) 기반 인증 흐름 설계",
+      "@RestControllerAdvice를 활용한 글로벌 예외 처리 구조 적용",
+      "AOP 기반 트랜잭션 관리와 Spring Security 인증 필터 구현"
+    ]
+  },
+  {
+    "id": "ssafy-spring-study",
+    "title": "SSAFY Spring 스터디",
+    "tagline": "20명 규모 Spring Boot 자율 스터디 공동 리더 및 강의 담당",
+    "period": "2026.03 ~",
+    "role": "공동 리더 · 강의 콘텐츠 제작",
+    "context": "SSAFY 15기 학습 커뮤니티 운영",
+    "stack": ["Spring Boot", "Java", "Backend", "Lecture", "Study"],
+    "repo": "https://github.com/SSAFY-SPRING-STUDY/DaeYeon",
+    "demo": "https://www.ssafy-study.site/studies/1",
+    "slidesPath": null,
+    "detailPath": "projects/ssafy-spring-study.html",
+    "code": "LEARN -> TEACH",
+    "highlights": [
+      "2명의 팀장 중 한 명으로 스터디 운영 및 커리큘럼 조율",
+      "강의 영상 제작과 실습 코드 구현 전담",
+      "Spring Boot 핵심 개념을 예제 중심으로 설명하는 자료 제작"
+    ]
+  },
+  {
+    "id": "sangmyung-wiki",
+    "title": "Sangmyung_Wiki",
+    "tagline": "재학생 인증 기반으로 정보를 공유하는 위키형 캡스톤 프로젝트",
+    "period": "2024.01 ~ 2024.09",
+    "role": "백엔드 담당 (팀 6명 · 백엔드 2명 중 1명)",
+    "context": "상명대학교 졸업 캡스톤 프로젝트",
+    "stack": ["Spring Boot", "Spring Security", "JPA", "MySQL", "React", "Docker", "AWS EC2"],
+    "repo": "https://github.com/rilac/SangMyung_WIKI",
+    "demo": null,
+    "slidesPath": "assets/files/sangmyung-wiki-deck.pptx",
+    "detailPath": "projects/sangmyung-wiki.html",
+    "code": "CAPSTONE",
+    "highlights": [
+      "@sangmyung.kr 학교 이메일 인증 플로우로 \"재학생만 글쓰기\" 제약을 백엔드에서 강제",
+      "로그인·아이디 찾기·비밀번호 재설정 등 계정 흐름 API 전반 담당",
+      "@RestControllerAdvice + CustomErrorCode enum으로 인증 도메인 예외 체계 확장"
+    ]
+  },
+  {
+    "id": "bootblog",
+    "title": "BootBlog",
+    "tagline": "회원가입부터 글 작성·댓글·프로필 탐색까지 구현한 멀티 유저 블로그",
+    "period": "2023.05.09 ~ 2023.05.23",
+    "role": "팀 프로젝트 4명 · 백엔드 주력",
+    "context": "KIC캠퍼스 국비지원교육 팀 프로젝트",
+    "stack": ["Spring Boot", "Thymeleaf", "JavaScript", "HTML", "CSS"],
+    "repo": "https://github.com/rilac/bootblog",
+    "demo": null,
+    "slidesPath": "assets/files/bootblog-deck.pptx",
+    "detailPath": "projects/bootblog.html",
+    "code": "MVC BLOG",
+    "highlights": [
+      "Spring Boot MVC와 Thymeleaf 기반 서버 렌더링 구현",
+      "회원가입, 게시글, 댓글, 프로필 탐색 등 핵심 블로그 기능 개발",
+      "짧은 기간 안에 팀 단위 CRUD 서비스를 완성하며 협업 경험 축적"
+    ]
+  }
+]

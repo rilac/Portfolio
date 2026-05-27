@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>임대연 포트폴리오</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <style>
+      @page {
+        size: A4;
+        margin: 18mm 16mm;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        color: #1a1a1a;
+        background: #ffffff;
+        font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 10.5pt;
+        line-height: 1.55;
+      }
+
+      h1, h2, h3, h4 {
+        margin: 0;
+        color: #1a1a1a;
+        line-height: 1.2;
+      }
+
+      p { margin: 0 0 8px; color: #374151; }
+      ul { margin: 0; padding-left: 18px; }
+      li { margin: 0 0 4px; color: #374151; }
+      code {
+        font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.9em;
+        padding: 1px 5px;
+        border-radius: 4px;
+        background: #f3f4f6;
+        color: #1a1a1a;
+      }
+
+      .eyebrow {
+        color: #2563eb;
+        font-size: 8.5pt;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin: 0 0 6px;
+      }
+
+      .muted { color: #6b7280; }
+      .accent { color: #2563eb; }
+      strong { color: #1a1a1a; }
+
+      .cover {
+        page-break-after: always;
+        padding: 18mm 0 8mm;
+        border-bottom: 2px solid #2563eb;
+      }
+      .cover h1 {
+        font-size: 32pt;
+        margin-bottom: 10mm;
+      }
+      .cover-lead {
+        font-size: 14pt;
+        color: #374151;
+        max-width: 160mm;
+        margin-bottom: 14mm;
+      }
+      .cover-contacts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6mm 14mm;
+        margin-top: 8mm;
+      }
+      .cover-contacts .field { display: flex; flex-direction: column; gap: 2px; }
+      .cover-contacts dt { font-size: 8.5pt; color: #6b7280; font-weight: 700; text-transform: uppercase; }
+      .cover-contacts dd { margin: 0; font-size: 11pt; color: #1a1a1a; }
+      .cover-meta {
+        margin-top: 10mm;
+        padding-top: 6mm;
+        border-top: 1px solid #e5e7eb;
+        font-size: 9pt;
+        color: #6b7280;
+      }
+
+      section.page {
+        page-break-before: always;
+        padding-top: 4mm;
+      }
+
+      .section-header {
+        margin-bottom: 6mm;
+      }
+      .section-header h2 {
+        font-size: 18pt;
+        margin-bottom: 4px;
+      }
+      .section-header p {
+        color: #6b7280;
+        font-size: 10pt;
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6mm;
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5mm;
+      }
+
+      .card {
+        border: 1px solid #e5e7eb;
+        border-radius: 6px;
+        padding: 5mm;
+        background: #ffffff;
+        page-break-inside: avoid;
+      }
+
+      .card h3 {
+        font-size: 12pt;
+        margin-bottom: 4px;
+      }
+
+      .chip-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 4px; margin: 4px 0 0; }
+      .chip-list li {
+        border: 1px solid #e5e7eb;
+        border-radius: 4px;
+        background: #ffffff;
+        padding: 2px 8px;
+        font-size: 8.5pt;
+        font-weight: 700;
+        color: #374151;
+        margin: 0;
+      }
+
+      .facts-list { list-style: none; padding: 0; margin: 0; }
+      .facts-list > div {
+        display: grid;
+        grid-template-columns: 32mm 1fr;
+        gap: 5mm;
+        margin-bottom: 4px;
+      }
+      .facts-list dt { color: #6b7280; font-size: 9pt; font-weight: 700; }
+      .facts-list dd { margin: 0; color: #1a1a1a; font-size: 10pt; }
+
+      .value-card {
+        border: 1px solid #e5e7eb;
+        border-radius: 6px;
+        padding: 5mm;
+      }
+      .value-card .index {
+        color: #2563eb;
+        font-weight: 900;
+        font-size: 11pt;
+        margin-bottom: 4px;
+      }
+      .value-card h3 { font-size: 11pt; margin-bottom: 4px; }
+      .value-card p { font-size: 9.5pt; margin: 0; }
+
+      .project {
+        page-break-inside: avoid;
+        margin-bottom: 8mm;
+        padding-bottom: 6mm;
+        border-bottom: 1px solid #e5e7eb;
+      }
+      .project:last-child { border-bottom: none; }
+      .project-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 6mm;
+        margin-bottom: 3mm;
+      }
+      .project h3 { font-size: 14pt; }
+      .project .project-meta {
+        font-size: 9pt;
+        color: #6b7280;
+        font-weight: 700;
+      }
+      .project .role-line {
+        font-size: 9.5pt;
+        color: #2563eb;
+        font-weight: 700;
+        margin-bottom: 3mm;
+      }
+      .project .tagline { font-size: 10pt; margin-bottom: 3mm; color: #374151; }
+      .project .links { font-size: 9pt; color: #2563eb; word-break: break-all; margin-bottom: 3mm; }
+      .project .links a { color: #2563eb; text-decoration: underline; }
+      .project ul.highlights { padding-left: 16px; }
+      .project ul.highlights li { font-size: 9.5pt; margin-bottom: 3px; }
+
+      .timeline-item {
+        page-break-inside: avoid;
+        border-left: 2px solid #e5e7eb;
+        padding-left: 5mm;
+        margin-bottom: 5mm;
+      }
+      .timeline-item time {
+        color: #2563eb;
+        font-size: 9pt;
+        font-weight: 800;
+      }
+      .timeline-item h3 { font-size: 11pt; margin: 2px 0; }
+      .timeline-item p { font-size: 9.5pt; margin: 0; }
+
+      .lecture-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 9pt;
+      }
+      .lecture-table th, .lecture-table td {
+        text-align: left;
+        padding: 5px 8px;
+        border-bottom: 1px solid #e5e7eb;
+        vertical-align: top;
+      }
+      .lecture-table th {
+        color: #6b7280;
+        font-size: 8.5pt;
+        text-transform: uppercase;
+        background: #f9fafb;
+      }
+      .lecture-table td a { color: #2563eb; text-decoration: underline; word-break: break-all; }
+      .lecture-table .day { font-weight: 800; color: #1a1a1a; white-space: nowrap; }
+
+      footer.print-footer {
+        margin-top: 10mm;
+        padding-top: 4mm;
+        border-top: 1px solid #e5e7eb;
+        font-size: 8.5pt;
+        color: #6b7280;
+        text-align: center;
+      }
+
+      .skill-card-print {
+        padding: 4mm;
+      }
+      .skill-card-print h3 { font-size: 10.5pt; margin-bottom: 3px; }
+      .skill-card-print p { font-size: 9pt; margin-bottom: 4px; color: #374151; }
+    </style>
+  </head>
+  <body>
+
+    <!-- ========== Cover ========== -->
+    <header class="cover">
+      <p class="eyebrow">Backend Engineer · Java / Spring Boot</p>
+      <h1>임대연</h1>
+      <p class="cover-lead">비즈니스를 이해하고, 왜를 끝까지 파고드는 백엔드 개발자입니다. 경영학과 컴퓨터과학을 함께 공부하며 사용자와 도메인을 먼저 이해하려고 합니다. Spring Boot 기반 백엔드 개발을 중심으로 React 프론트엔드까지 연결해 실제로 동작하는 서비스를 만듭니다.</p>
+
+      <dl class="cover-contacts">
+        <div class="field"><dt>Email</dt><dd>eodos6480@gmail.com</dd></div>
+        <div class="field"><dt>GitHub</dt><dd>github.com/rilac</dd></div>
+        <div class="field"><dt>Tech Blog</dt><dd>velog.io/@asd990702</dd></div>
+        <div class="field"><dt>Baekjoon</dt><dd>acmicpc.net/user/asd990702</dd></div>
+      </dl>
+
+      <div class="cover-meta">
+        상명대학교 (서울) · 경영학 · 컴퓨터과학 복수전공 · 18학번 · 2025.09 졸업<br>
+        현재: SSAFY 15기 (2026.01 ~ 진행 중)
+      </div>
+    </header>
+
+    <!-- ========== About ========== -->
+    <section class="page">
+      <div class="section-header">
+        <p class="eyebrow">About Me</p>
+        <h2>서비스의 맥락과 구현의 원리를 같이 보는 개발자</h2>
+        <p>백엔드 개발을 주력으로 하되, 화면에서 API까지 이어지는 사용자 흐름 전체를 이해하고 구현하는 것을 중요하게 생각합니다.</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="value-card">
+          <div class="index">01</div>
+          <h3>비즈니스를 이해합니다</h3>
+          <p>경영학·컴퓨터과학 복수전공 경험을 바탕으로 기능 요구사항 뒤의 목적과 사용자 가치를 먼저 확인합니다.</p>
+        </article>
+        <article class="value-card">
+          <div class="index">02</div>
+          <h3>함께 성장합니다</h3>
+          <p>SSAFY에서 약 20명 규모의 Spring Boot 스터디를 공동 운영하며 강의와 실습 코드를 제작했습니다.</p>
+        </article>
+        <article class="value-card">
+          <div class="index">03</div>
+          <h3>원리를 파고듭니다</h3>
+          <p>Spring AOP를 학습할 때 <code>@Transactional</code>이 프록시 기반으로 동작해 <code>private</code> 메서드에는 적용되지 않는다는 사실을, 디버거로 호출 스택을 따라가며 직접 확인했습니다.</p>
+        </article>
+      </div>
+
+      <div style="margin-top: 8mm;">
+        <p class="eyebrow">Profile</p>
+        <dl class="facts-list">
+          <div><dt>학교</dt><dd>상명대학교 (서울)</dd></div>
+          <div><dt>전공</dt><dd>경영학 · 컴퓨터과학 복수전공</dd></div>
+          <div><dt>학번 · 졸업</dt><dd>18학번 · 2025.09 졸업</dd></div>
+          <div><dt>현재</dt><dd>SSAFY 15기 (2026.01 ~ 진행 중)</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ========== Skills ========== -->
+    <section class="page">
+      <div class="section-header">
+        <p class="eyebrow">Skills</p>
+        <h2>Spring Boot 중심의 백엔드와 서비스 구현 역량</h2>
+        <p>주력은 Java/Spring 백엔드이며, React 기반 프론트엔드와 AWS 배포 경험을 함께 갖추고 있습니다.</p>
+      </div>
+
+      <div class="grid-2">
+        <article class="card skill-card-print">
+          <h3>Backend (Main)</h3>
+          <p>인증, 영속성, 예외 처리, 트랜잭션 흐름을 서비스 구조에 맞춰 설계합니다.</p>
+          <ul class="chip-list"><li>Java</li><li>Spring Boot 3</li><li>Spring Security</li><li>JPA/Hibernate</li><li>Spring AOP</li></ul>
+        </article>
+        <article class="card skill-card-print">
+          <h3>Frontend</h3>
+          <p>API와 맞물리는 화면 흐름을 이해하며, 캡스톤과 SSAFY BLIND에서 Vite 기반 React 프로젝트를 구현했습니다.</p>
+          <ul class="chip-list"><li>React</li><li>Vite</li><li>JavaScript ES6+</li><li>TailwindCSS</li></ul>
+        </article>
+        <article class="card skill-card-print">
+          <h3>Database</h3>
+          <p>개발과 운영 환경에 맞춰 관계형 데이터베이스를 사용하고, JPA 모델링과 쿼리 흐름을 점검합니다.</p>
+          <ul class="chip-list"><li>MySQL</li><li>H2</li><li>PostgreSQL</li></ul>
+        </article>
+        <article class="card skill-card-print">
+          <h3>DevOps</h3>
+          <p>팀 프로젝트에서 AWS와 Docker 기반 배포 환경을 경험했습니다.</p>
+          <ul class="chip-list"><li>AWS EC2</li><li>RDS</li><li>S3</li><li>Docker</li></ul>
+        </article>
+        <article class="card skill-card-print">
+          <h3>AI Experience</h3>
+          <p>Kaggle SSAFY AI 챌린지에서 Qwen2.5-VL 파인튜닝 경험을 쌓았습니다.</p>
+          <ul class="chip-list"><li>Kaggle</li><li>Qwen2.5-VL</li><li>Fine-tuning</li></ul>
+        </article>
+        <article class="card skill-card-print">
+          <h3>Problem Solving</h3>
+          <p>백준 알고리즘 풀이를 GitHub(rilac/BKJN)에 기록하며, 삼성 SW 역량테스트 A형 취득으로 구현 기반 문제 해결력을 다졌습니다.</p>
+          <ul class="chip-list"><li>BOJ</li><li>Algorithm</li><li>Samsung A형</li></ul>
+        </article>
+        <article class="card skill-card-print">
+          <h3>Tools &amp; Collaboration</h3>
+          <p>Git 기반 협업과 Gradle 빌드, IntelliJ + Postman으로 API를 만들고 검증합니다. 문서·기획은 Notion으로 정리합니다.</p>
+          <ul class="chip-list"><li>Git</li><li>GitHub</li><li>Gradle</li><li>IntelliJ IDEA</li><li>Postman</li><li>Notion</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== Projects ========== -->
+    <section class="page">
+      <div class="section-header">
+        <p class="eyebrow">Projects</p>
+        <h2>학습과 실전 구현을 연결한 프로젝트</h2>
+        <p>개인 사이드 프로젝트, 학습 커뮤니티 운영, 캡스톤, 국비지원 팀프로젝트를 통해 서비스를 직접 만들고 개선했습니다.</p>
+      </div>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>SSAFY BLIND</h3>
+          <span class="project-meta">2026.03 ~ (개발 중) · SSAFY 15기 사이드 프로젝트</span>
+        </div>
+        <p class="role-line">개인 프로젝트 (풀스택)</p>
+        <p class="tagline">SSAFY 교육생만 참여할 수 있는 익명 커뮤니티 플랫폼입니다. 인증 흐름, 예외 처리, 보안 설정, 프론트엔드 연동까지 개인 프로젝트로 구현했습니다.</p>
+        <ul class="chip-list" style="margin-bottom: 3mm;"><li>Spring Boot 3</li><li>Spring Security</li><li>JPA</li><li>JWT</li><li>React</li><li>Vite</li><li>TailwindCSS</li></ul>
+        <p class="links">GitHub: <a href="https://github.com/rilac/SSAFY_BLIND">github.com/rilac/SSAFY_BLIND</a></p>
+        <ul class="highlights">
+          <li>Mattermost API를 프록시해 SSAFY 교육생 인증 흐름을 구성</li>
+          <li>JWT를 HttpOnly Cookie로 관리해 클라이언트 노출 위험을 줄이는 인증 구조 적용</li>
+          <li><code>@RestControllerAdvice</code> 기반 글로벌 예외 처리로 API 응답 형식을 일관되게 정리</li>
+          <li>Spring Security 인증 필터와 AOP 기반 트랜잭션 흐름을 디버깅하며 동작 원리를 검증</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>SSAFY Spring 스터디 (공동 리더 · 강의 담당)</h3>
+          <span class="project-meta">2026.03 ~ · 학습 커뮤니티 운영</span>
+        </div>
+        <p class="role-line">공동 리더 · 강의 콘텐츠 제작</p>
+        <p class="tagline">약 20명 규모의 Spring Boot 자율 스터디를 공동 운영하며, 강의 영상 제작과 실습 코드 구현을 담당했습니다.</p>
+        <ul class="chip-list" style="margin-bottom: 3mm;"><li>Spring Boot</li><li>Java</li><li>Backend</li><li>Lecture</li></ul>
+        <p class="links">GitHub: <a href="https://github.com/SSAFY-SPRING-STUDY/DaeYeon">github.com/SSAFY-SPRING-STUDY/DaeYeon</a> · 스터디 사이트: <a href="https://www.ssafy-study.site/studies/1">ssafy-study.site/studies/1</a></p>
+        <ul class="highlights">
+          <li>2명의 팀장 중 한 명으로 스터디 운영 방향과 학습 흐름을 조율</li>
+          <li>Spring Boot 핵심 개념을 실습 코드와 함께 설명하는 강의 영상을 제작</li>
+          <li>참여자가 직접 따라 할 수 있도록 예제 중심의 코드 저장소를 관리</li>
+          <li>강의를 준비하며 의존성 주입, MVC 흐름, 계층 분리 같은 기본기를 더 정확히 설명할 수 있게 됨</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>Sangmyung_Wiki (졸업 캡스톤 · 백엔드)</h3>
+          <span class="project-meta">2024.01 ~ 2024.09 · 상명대학교 졸업 캡스톤</span>
+        </div>
+        <p class="role-line">백엔드 담당 (팀 6명 · 백엔드 2명 중 1명)</p>
+        <p class="tagline">상명대학교 구성원이 정보를 공유·탐색하는 위키형 캡스톤 프로젝트입니다. 6명 팀의 백엔드 2명 중 한 명으로, 회원 인증·계정 복구 전반과 예외 처리 체계 확장을 담당했습니다.</p>
+        <ul class="chip-list" style="margin-bottom: 3mm;"><li>Spring Boot</li><li>Spring Security</li><li>JPA</li><li>MySQL</li><li>JWT</li><li>Docker</li><li>AWS EC2</li></ul>
+        <p class="links">GitHub: <a href="https://github.com/rilac/SangMyung_WIKI">github.com/rilac/SangMyung_WIKI</a></p>
+        <ul class="highlights">
+          <li><strong>학교 이메일 인증 기반 회원가입 플로우</strong> — Google SMTP로 <code>@sangmyung.kr</code> 메일에 인증 요청을 발송하고, 요청·검증의 모든 단계를 DB에 로그로 남겨 재발송·만료·검증 상태를 추적하도록 설계. "재학생만 글을 쓸 수 있다"는 서비스 핵심 제약을 백엔드 레벨에서 강제</li>
+          <li><strong>로그인 / 아이디 찾기 / 비밀번호 찾기·변경 API</strong> — 계정 식별 흐름 전반 담당. 단계마다 필요한 검증 로직과 응답 포맷을 정의하고, 비밀번호 재설정 경로에는 <code>BusinessException</code> 기반 명확한 에러 반환 적용</li>
+          <li><strong>에러 코드 체계 확장 (<code>CustomErrorCode</code> enum)</strong> — 이메일 미존재·인증 실패·재전송 제한 등 인증 도메인 고유의 에러 케이스를 정의하고, <code>@RestControllerAdvice</code> 기반 <code>GlobalExceptionHandler</code>가 일관된 응답 포맷으로 내려주도록 검증 로직 추가</li>
+          <li><strong>JWT 토큰 발급 로직 협업</strong> — 다른 백엔드 멤버와 함께 JWT 기반 토큰 발급·검증 구조를 설계·구현. Spring Security의 <code>SecurityFilterChain</code> 위에 토큰 기반 인증을 얹고, <code>@CurrentUser</code>로 현재 사용자를 주입받을 수 있는 흐름까지 연결</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>BootBlog</h3>
+          <span class="project-meta">2023.05.09 ~ 2023.05.23 · KIC캠퍼스 국비지원교육 팀 프로젝트</span>
+        </div>
+        <p class="role-line">팀 프로젝트 4명 · 백엔드 주력</p>
+        <p class="tagline">Spring Boot와 Thymeleaf를 활용해 회원가입, 글 작성, 댓글, 프로필 탐색까지 구현한 멀티 유저 블로그 플랫폼입니다.</p>
+        <ul class="chip-list" style="margin-bottom: 3mm;"><li>Spring Boot</li><li>Thymeleaf</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
+        <p class="links">GitHub: <a href="https://github.com/rilac/bootblog">github.com/rilac/bootblog</a></p>
+        <ul class="highlights">
+          <li>Spring Boot MVC와 Thymeleaf 기반 서버 렌더링 페이지 구현</li>
+          <li>회원가입, 게시글 작성, 댓글, 프로필 탐색 등 블로그 핵심 기능 개발</li>
+          <li>프론트와 백엔드 구분이 명확하지 않은 팀 구조에서 백엔드 구현을 주도</li>
+          <li>2주라는 짧은 기간 안에 CRUD 중심 서비스를 완성하며 협업과 일정 관리 경험 축적</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- ========== Activities & 강의 ========== -->
+    <section class="page">
+      <div class="section-header">
+        <p class="eyebrow">Activities</p>
+        <h2>교육, 스터디, 인증</h2>
+      </div>
+
+      <div class="grid-2" style="margin-bottom: 8mm;">
+        <article class="timeline-item">
+          <time>2026.01 ~ (진행 중 · 12월 수료 예정)</time>
+          <h3>SSAFY 15기</h3>
+          <p>Spring Boot 스터디 공동 리더로 활동하며 강의 영상과 실습 코드를 제작하고 있습니다.</p>
+        </article>
+        <article class="timeline-item">
+          <time>2026.04.22 · 취득</time>
+          <h3>삼성 SW 역량테스트 A형</h3>
+          <p>구현형 알고리즘 문제 해결 역량을 객관적으로 인증받았습니다.</p>
+        </article>
+        <article class="timeline-item">
+          <time>2018.03 ~ 2025.09</time>
+          <h3>상명대학교 졸업</h3>
+          <p>경영학과 컴퓨터과학을 복수전공했습니다.</p>
+        </article>
+        <article class="timeline-item">
+          <time>2023.01 ~ 2023.06</time>
+          <h3>KIC캠퍼스 국비지원교육</h3>
+          <p>6개월 풀스택 교육과정 수료 · BootBlog 팀 프로젝트 진행</p>
+        </article>
+      </div>
+
+      <div class="section-header">
+        <p class="eyebrow">Lectures</p>
+        <h2 style="font-size: 14pt;">Spring 스터디 강의 · 명세서</h2>
+        <p>"명세서를 읽고 → 직접 구현 → 강의 영상으로 풀이 검증"의 학습 사이클로 운영했습니다.</p>
+      </div>
+
+      <table class="lecture-table">
+        <thead>
+          <tr><th>회차</th><th>주제</th><th>강의 영상</th><th>명세서</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="day">Day 2-1 · 회차 1</td>
+            <td>REST API 기본 — 인사 메시지 반환</td>
+            <td><a href="https://youtu.be/QTvBdIQksOg">youtu.be/QTvBdIQksOg</a></td>
+            <td><a href="https://www.ssafy-study.site/studies/1/curriculums/2/posts/7">posts/7</a></td>
+          </tr>
+          <tr>
+            <td class="day">Day 2-2 · 회차 2</td>
+            <td>게시글 CRUD REST API</td>
+            <td><a href="https://youtu.be/-FGd6NYZvqQ">youtu.be/-FGd6NYZvqQ</a></td>
+            <td><a href="https://www.ssafy-study.site/studies/1/curriculums/2/posts/8">posts/8</a></td>
+          </tr>
+          <tr>
+            <td class="day">Day 3 · 회차 3</td>
+            <td>회원 관리 + UUID 기반 세션 인증</td>
+            <td><a href="https://youtu.be/FOwA-AMgENY">youtu.be/FOwA-AMgENY</a></td>
+            <td><a href="https://www.ssafy-study.site/studies/1/curriculums/2/posts/9">posts/9</a></td>
+          </tr>
+          <tr>
+            <td class="day">Day 4 · 회차 4</td>
+            <td>ApiResponse&lt;T&gt; 통일 · 도메인 독립성 확보</td>
+            <td><a href="https://youtu.be/Ya7wtZzqJcQ">youtu.be/Ya7wtZzqJcQ</a></td>
+            <td><a href="https://www.ssafy-study.site/studies/1/curriculums/2/posts/12">posts/12</a></td>
+          </tr>
+          <tr>
+            <td class="day">Day 5 · 회차 5</td>
+            <td>MySQL 영속화 · JPA로 코드 축약</td>
+            <td><a href="https://www.youtube.com/watch?v=35_48r9_AcI">youtube.com/?v=35_48r9_AcI</a></td>
+            <td><a href="https://www.ssafy-study.site/studies/1/curriculums/2/posts/14">posts/14</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <footer class="print-footer">
+        © 2026 임대연 · eodos6480@gmail.com · github.com/rilac · Last updated 2026.05.27
+      </footer>
+    </section>
+
+  </body>
+</html>

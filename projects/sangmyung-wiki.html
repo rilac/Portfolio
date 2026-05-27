@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="상명대학교 졸업 캡스톤 프로젝트 Sangmyung_Wiki 상세 페이지입니다.">
+    <meta name="theme-color" content="#2563eb" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)">
+    <link rel="canonical" href="https://rilac.github.io/portfolio/projects/sangmyung-wiki.html">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://rilac.github.io/portfolio/projects/sangmyung-wiki.html">
+    <meta property="og:title" content="Sangmyung_Wiki | 임대연 포트폴리오">
+    <meta property="og:description" content="Spring Boot · Spring Security · JPA · MySQL · React 기반 위키형 캡스톤 — 백엔드 회원 인증과 예외 처리 체계 담당.">
+    <meta property="og:image" content="https://rilac.github.io/portfolio/assets/img/profile.jpg">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="임대연 포트폴리오">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sangmyung_Wiki | 임대연 포트폴리오">
+    <meta name="twitter:description" content="상명대 캡스톤 위키형 프로젝트 — 백엔드 인증·예외 처리 담당.">
+    <meta name="twitter:image" content="https://rilac.github.io/portfolio/assets/img/profile.jpg">
+    <title>Sangmyung_Wiki | 임대연 포트폴리오</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <script>
+      (function () {
+        var stored = localStorage.getItem("theme");
+        var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="../index.html#home"><span class="brand-mark">DY</span><span>임대연</span></a>
+        <nav id="primary-nav" class="site-nav" aria-label="주요 메뉴">
+          <ul class="nav-links">
+            <li><a class="nav-link" href="../index.html#about">About</a></li>
+            <li><a class="nav-link" href="../index.html#skills">Skills</a></li>
+            <li><a class="nav-link is-active" href="../index.html#projects" aria-current="page">Projects</a></li>
+            <li><a class="nav-link" href="../index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button class="icon-button" type="button" data-theme-toggle aria-label="다크 모드로 전환" aria-pressed="false"></button>
+          <button class="icon-button menu-toggle" type="button" data-menu-toggle aria-label="메뉴 열기" aria-controls="primary-nav" aria-expanded="false">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="project-detail-hero">
+        <div class="container detail-hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Capstone Project · Backend</p>
+            <h1>Sangmyung_Wiki</h1>
+            <p class="lead">상명대학교 구성원이 정보를 공유·탐색하는 위키형 캡스톤 프로젝트입니다. 6명 팀의 백엔드 2명 중 한 명으로, 회원 인증·계정 복구 전반과 예외 처리 체계 확장을 담당했습니다.</p>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="https://github.com/rilac/SangMyung_WIKI" target="_blank" rel="noreferrer">GitHub 보기</a>
+              <a class="btn" href="../assets/files/sangmyung-wiki-deck.pptx" download>발표자료 다운로드</a>
+              <a class="btn" href="../index.html#projects">목록으로</a>
+            </div>
+          </div>
+          <aside class="card detail-summary reveal">
+            <div class="metric"><strong>백엔드 담당</strong><span class="muted">팀 6명 · 백엔드 2명 중 1명</span></div>
+            <div class="metric"><strong>2024.01 ~ 2024.09</strong><span class="muted">진행 기간</span></div>
+            <ul class="chip-list" role="list">
+              <li class="chip">Spring Boot</li>
+              <li class="chip">Spring Security</li>
+              <li class="chip">JPA</li>
+              <li class="chip">MySQL</li>
+              <li class="chip">JWT</li>
+              <li class="chip">Docker</li>
+              <li class="chip">AWS EC2</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <div class="container detail-grid">
+          <article class="card value-card reveal">
+            <h2>핵심 구현</h2>
+            <ul class="point-list">
+              <li><strong>학교 이메일 인증 기반 회원가입 플로우</strong> — Google SMTP로 <code>@sangmyung.kr</code> 메일에 인증 요청을 발송하고, 요청·검증의 모든 단계를 DB에 로그로 남겨 재발송·만료·검증 상태를 추적하도록 설계. "재학생만 글을 쓸 수 있다"는 서비스 핵심 제약을 백엔드 레벨에서 강제했습니다.</li>
+              <li><strong>로그인 / 아이디 찾기 / 비밀번호 찾기·변경 API</strong> — 계정 식별 흐름 전반을 담당. 단계마다 필요한 검증 로직과 응답 포맷을 정의하고, 비밀번호 재설정 경로에는 <code>BusinessException</code> 기반 명확한 에러 반환을 적용했습니다.</li>
+              <li><strong>에러 코드 체계 확장 (<code>CustomErrorCode</code> enum)</strong> — 이메일 미존재·인증 실패·재전송 제한 등 인증 도메인 고유의 에러 케이스를 정의하고, <code>@RestControllerAdvice</code> 기반 <code>GlobalExceptionHandler</code>가 일관된 응답 포맷으로 내려주도록 검증 로직을 추가했습니다.</li>
+              <li><strong>JWT 토큰 발급 로직 협업</strong> — 다른 백엔드 멤버와 함께 JWT 기반 토큰 발급·검증 구조를 설계·구현. Spring Security의 <code>SecurityFilterChain</code> 위에 토큰 기반 인증을 얹고, 컨트롤러에서 <code>@CurrentUser</code>로 현재 사용자를 주입받을 수 있는 흐름까지 연결했습니다.</li>
+            </ul>
+          </article>
+          <article class="card value-card reveal">
+            <h2>배운 점</h2>
+            <p>"인증을 구현한다"는 한 문장 뒤에 실제로 얼마나 많은 상태와 예외가 숨어 있는지 체감했습니다. 메일 발송 실패, 토큰 만료, 재요청 제한 같은 케이스가 누락되면 서비스 신뢰가 한 번에 깨질 수 있다는 점을 알게 되었고, 그 이후로는 인증·예외 처리를 기능이 아닌 <em>도메인</em>으로 보고 설계하게 되었습니다.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 임대연 · Built with HTML, CSS and Vanilla JavaScript · Last updated <time datetime="2026-05-27">2026.05.27</time></p>
+        <a href="../index.html#projects">← 프로젝트 목록</a>
+      </div>
+    </footer>
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/nav.js"></script>
+    <script src="../assets/js/animations.js"></script>
+  </body>
+</html>
