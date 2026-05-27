@@ -342,6 +342,117 @@ code {
   font-weight: 800;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
+.email-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.email-modal[hidden] {
+  display: none;
+}
+
+.email-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+
+.email-modal-content {
+  position: relative;
+  max-width: 460px;
+  width: 100%;
+  padding: 28px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  animation: email-modal-in 180ms ease;
+}
+
+@keyframes email-modal-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.email-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 1.4rem;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  display: grid;
+  place-items: center;
+}
+
+.email-modal-close:hover {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+}
+
+.email-modal-content h2 {
+  font-size: 1.25rem;
+  margin: 0 0 4px;
+}
+
+.email-modal-content > p.muted {
+  margin: 0 0 14px;
+  font-size: 0.92rem;
+}
+
+.email-display {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.email-address {
+  flex: 1;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  word-break: break-all;
+  user-select: all;
+}
+
+.email-options {
+  display: grid;
+  gap: 8px;
+}
+
+.email-options .btn {
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .email-options {
+    grid-template-columns: 1fr 1fr;
+  }
+  .email-options .btn:first-child {
+    grid-column: span 2;
+  }
+}
+
 @media (max-width: 840px) {
   .menu-toggle {
     display: inline-grid;

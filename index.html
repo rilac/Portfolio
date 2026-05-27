@@ -72,7 +72,7 @@
               <a class="btn btn-primary" href="assets/files/임대연_포트폴리오.pdf" download>포트폴리오 PDF</a>
               <a class="btn" href="#projects">프로젝트 보기</a>
               <a class="btn" href="https://github.com/rilac" target="_blank" rel="noreferrer">GitHub</a>
-              <a class="btn" href="mailto:eodos6480@gmail.com">이메일 보내기</a>
+              <a class="btn" href="mailto:eodos6480@gmail.com" data-email-modal-trigger>이메일 보내기</a>
             </div>
           </div>
           <aside class="hero-panel reveal" aria-label="프로필 사진">
@@ -352,7 +352,7 @@
             <h2>더 자세한 코드와 기록은 아래에서 확인할 수 있습니다</h2>
           </div>
           <div class="contact-grid">
-            <a class="card contact-card reveal" href="mailto:eodos6480@gmail.com">
+            <a class="card contact-card reveal" href="mailto:eodos6480@gmail.com" data-email-modal-trigger>
               <span class="eyebrow">Email</span>
               <h3>eodos6480@gmail.com</h3>
               <p>프로젝트, 채용, 협업 관련 연락을 받을 수 있습니다.</p>
@@ -384,9 +384,28 @@
       </div>
     </footer>
 
+    <div id="email-modal" class="email-modal" hidden role="dialog" aria-modal="true" aria-labelledby="email-modal-title">
+      <div class="email-modal-backdrop" data-email-close aria-hidden="true"></div>
+      <div class="email-modal-content">
+        <button type="button" class="email-modal-close" data-email-close aria-label="닫기">×</button>
+        <h2 id="email-modal-title">이메일 보내기</h2>
+        <p class="muted">원하시는 방법으로 메일을 보낼 수 있습니다.</p>
+        <div class="email-display">
+          <span class="email-address" data-email-address>eodos6480@gmail.com</span>
+          <button type="button" class="btn btn-sm" data-email-copy>복사</button>
+        </div>
+        <div class="email-options">
+          <a class="btn btn-primary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=eodos6480@gmail.com" target="_blank" rel="noreferrer">Gmail로 작성</a>
+          <a class="btn" href="https://outlook.live.com/mail/0/deeplink/compose?to=eodos6480@gmail.com" target="_blank" rel="noreferrer">Outlook으로 작성</a>
+          <a class="btn" href="mailto:eodos6480@gmail.com">기본 메일 앱</a>
+        </div>
+      </div>
+    </div>
+
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/nav.js"></script>
     <script src="assets/js/projects.js"></script>
     <script src="assets/js/animations.js"></script>
+    <script src="assets/js/email-modal.js"></script>
   </body>
 </html>
