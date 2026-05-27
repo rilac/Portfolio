@@ -58,9 +58,9 @@
       <section class="project-detail-hero">
         <div class="container detail-hero-grid">
           <div class="hero-copy reveal">
-            <p class="eyebrow">Team Project</p>
+            <p class="eyebrow">Team Project · Backend &amp; PM</p>
             <h1>BootBlog</h1>
-            <p class="lead">Spring Boot와 Thymeleaf를 활용해 회원가입, 글 작성, 댓글, 프로필 탐색까지 구현한 멀티 유저 블로그 플랫폼입니다.</p>
+            <p class="lead">Spring Framework를 처음 학습하며, 티스토리·벨로그를 레퍼런스로 핵심 블로그 기능을 재현한 멀티 유저 블로그 플랫폼입니다. 팀 4명에서 백엔드 구현과 PM 역할을 함께 맡았습니다.</p>
             <div class="btn-row">
               <a class="btn btn-primary" href="https://github.com/rilac/bootblog" target="_blank" rel="noreferrer">GitHub 보기</a>
               <a class="btn" href="../assets/files/bootblog-deck.pptx" download>발표자료 다운로드</a>
@@ -68,34 +68,119 @@
             </div>
           </div>
           <aside class="card detail-summary reveal">
-            <div class="metric"><strong>4명</strong><span class="muted">팀 프로젝트</span></div>
-            <div class="metric"><strong>2023.05.09 ~ 2023.05.23</strong><span class="muted">진행 기간</span></div>
+            <div class="metric"><strong>백엔드 · PM</strong><span class="muted">팀 4명 · KIC 국비교육</span></div>
+            <div class="metric"><strong>2주</strong><span class="muted">2023.05.09 ~ 2023.05.23</span></div>
             <ul class="chip-list" role="list">
-              <li class="chip">Spring Boot</li>
+              <li class="chip">Java 11</li>
+              <li class="chip">Spring Boot 2.7</li>
+              <li class="chip">Spring Data JPA</li>
+              <li class="chip">Oracle</li>
               <li class="chip">Thymeleaf</li>
-              <li class="chip">JavaScript</li>
-              <li class="chip">HTML</li>
-              <li class="chip">CSS</li>
+              <li class="chip">Bootstrap</li>
             </ul>
           </aside>
         </div>
       </section>
 
       <section class="detail-section">
-        <div class="container detail-grid">
+        <div class="container detail-stack">
+
           <article class="card value-card reveal">
-            <h2>핵심 구현</h2>
+            <h2>프로젝트 배경</h2>
+            <div class="background-grid">
+              <div>
+                <h3>사용 대상</h3>
+                <p>블로그 서비스를 이용하는 일반 사용자. 회원가입 후 자신만의 블로그를 운영하고, 다른 사용자의 블로그를 방문해 글을 읽고 댓글을 남길 수 있습니다.</p>
+              </div>
+              <div>
+                <h3>학습 배경</h3>
+                <p>Spring Framework를 처음 학습하는 단계에서, 이론을 예제 수준에서 끝내지 않고 "사용자가 실제로 써본 적 있는 서비스 유형"을 직접 구현해 보자는 것이 출발점이었습니다. 티스토리·벨로그 같은 기존 블로그 플랫폼을 레퍼런스로 두고 핵심 기능을 최대한 비슷하게 재현하는 것을 목표로 했습니다.</p>
+              </div>
+              <div>
+                <h3>구현 접근</h3>
+                <p>Spring MVC 기본 요청 흐름 위에 JPA/Hibernate로 도메인 모델을 설계하고, <code>HttpSession</code> 기반 인증 + <code>HandlerInterceptor</code>로 보호 경로를 제어하는 표준적인 구조를 따랐습니다. 화면은 Thymeleaf + Bootstrap으로 구성해, 다중 테마(theme-1 ~ theme-8) 전환까지 구현해 완성도를 높였습니다.</p>
+              </div>
+              <div>
+                <h3>학습 성과</h3>
+                <p>회원가입·로그인, 글 CRUD, 댓글, 페이지네이션, 다른 사용자 블로그 탐색 등 블로그 플랫폼이 공통적으로 가진 기능을 한 번의 프로젝트 사이클로 경험. 이후 더 복잡한 Spring Boot 프로젝트(SSAFY BLIND)로 확장해 나갈 수 있는 기반을 마련했습니다.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card value-card reveal">
+            <h2>사용 기술 및 라이브러리</h2>
+            <div class="stack-categories">
+              <div class="stack-category">
+                <p class="eyebrow">Backend</p>
+                <ul class="chip-list" role="list">
+                  <li class="chip">Java 11</li>
+                  <li class="chip">Spring Boot 2.7.11</li>
+                  <li class="chip">Spring MVC</li>
+                  <li class="chip">Spring Data JPA</li>
+                  <li class="chip">Hibernate</li>
+                </ul>
+              </div>
+              <div class="stack-category">
+                <p class="eyebrow">Database</p>
+                <ul class="chip-list" role="list">
+                  <li class="chip">Oracle Database</li>
+                  <li class="chip">ojdbc8</li>
+                </ul>
+              </div>
+              <div class="stack-category">
+                <p class="eyebrow">View</p>
+                <ul class="chip-list" role="list">
+                  <li class="chip">Thymeleaf</li>
+                  <li class="chip">Bootstrap</li>
+                  <li class="chip">jQuery</li>
+                </ul>
+              </div>
+              <div class="stack-category">
+                <p class="eyebrow">Build &amp; 기타</p>
+                <ul class="chip-list" role="list">
+                  <li class="chip">Gradle</li>
+                  <li class="chip">Lombok</li>
+                  <li class="chip">Spring Validation</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="card value-card reveal">
+            <h2>주요 구현</h2>
             <ul class="point-list">
-              <li>Spring Boot MVC와 Thymeleaf 기반 서버 렌더링 페이지를 구현했습니다.</li>
-              <li>회원가입, 게시글 작성, 댓글, 프로필 탐색 등 블로그 핵심 기능을 개발했습니다.</li>
-              <li>프론트와 백엔드 구분이 명확하지 않은 팀 구조에서 백엔드 구현을 주도했습니다.</li>
-              <li>짧은 기간 안에 CRUD 중심 서비스를 완성하며 협업과 일정 관리 경험을 쌓았습니다.</li>
+              <li><strong>ERD 설계 및 JPA 기반 테이블 생성</strong> — <code>Members</code>, <code>Board</code>, <code>Comments</code> 엔티티 관계를 설계한 뒤 <code>ddl-auto: create</code> 설정으로 스키마를 자동 생성했습니다.</li>
+              <li><strong>DTO 계층 설계</strong> — <code>LoginDTO</code>, <code>RegisterDTO</code>, <code>BoardDTO</code>, <code>CommentDTO</code>, <code>UpdateDTO</code> 등 요청/응답을 분리한 구조로 Entity 직접 노출을 방지했습니다.</li>
+              <li><strong>댓글 기능 추가 구현</strong> — <code>Comments</code> 엔티티와 <code>Board</code> 간 <code>@ManyToOne</code> 매핑, 작성/삭제 API와 게시글 상세 페이지 연동.</li>
+              <li><strong>LoginCheckInterceptor 구현</strong> — <code>HandlerInterceptor</code>를 구현해 <code>WebConfig</code>에 등록, 비로그인 사용자의 보호 경로 접근 차단 및 리다이렉트 처리.</li>
+              <li><strong>테스트 데이터 초기화</strong> — <code>TestDataInit</code>으로 애플리케이션 구동 시 샘플 회원·글·댓글을 자동 주입해 반복 개발·검증을 효율화했습니다.</li>
             </ul>
           </article>
-          <article class="card value-card reveal">
-            <h2>배운 점</h2>
-            <p>첫 팀 단위 웹 프로젝트를 통해 기능을 끝까지 완성하는 경험을 얻었습니다. 화면, 컨트롤러, 템플릿, 데이터 흐름이 맞물려야 사용자가 실제로 쓸 수 있는 서비스가 된다는 점을 배웠습니다.</p>
+
+          <article class="card value-card pm-card reveal">
+            <p class="eyebrow">Project Management</p>
+            <h2>PM 역할</h2>
+            <p>일정 관리, 역할 분배, 코드 리뷰, 에러 리뷰를 담당했습니다. 5명으로 시작한 팀에서 한 명이 중도 이탈하는 상황을 만나, 남은 인원 간 업무 재분배와 일정 재조정을 주도했습니다.</p>
           </article>
+
+          <article class="card value-card reveal">
+            <h2>깨달은 점</h2>
+            <ol class="lessons">
+              <li>
+                <h3>DTO와 Entity 분리의 이유를 체감했습니다.</h3>
+                <p>처음에는 Entity 하나로 요청·응답·영속성까지 모두 처리해도 될 것 같았지만, 회원가입 시 노출되면 안 되는 필드·수정 시에만 오는 필드·응답에만 필요한 필드가 뒤섞이면서 금방 한계가 드러났습니다. 요청별 DTO를 분리한 뒤에야 Controller 코드가 단순해지고, 엔티티가 DB 관점에 집중할 수 있게 된다는 걸 실감했습니다.</p>
+              </li>
+              <li>
+                <h3>Interceptor는 "공통 관심사를 요청 처리 파이프라인에서 빼내는 도구"</h3>
+                <p>처음에는 각 Controller 메서드마다 세션 체크 코드를 <code>if (session.getAttribute(...) == null)</code> 식으로 반복해서 넣었다가, <code>LoginCheckInterceptor</code>로 추출하고 <code>WebConfig</code>에서 <code>excludePathPatterns</code>로 예외 경로만 지정하는 방식으로 바꾸니 컨트롤러가 훨씬 깔끔해졌습니다.</p>
+              </li>
+              <li>
+                <h3>PM 역할은 기술 이상으로 "예외 상황 대응"이 핵심</h3>
+                <p>5명으로 시작한 팀에서 한 명이 중도 이탈하면서 해당 기능의 분량을 나머지 인원이 나눠 맡아야 했습니다. 그때 가장 중요했던 건 남은 일정 대비 필수 기능과 포기 가능한 기능을 빠르게 재조정하는 일이었습니다. 완벽한 계획을 짜는 것보다, 변수가 생겼을 때 얼마나 빠르게 현실적인 재계획을 내놓을 수 있느냐가 PM의 실제 역량임을 처음으로 체감했습니다.</p>
+              </li>
+            </ol>
+          </article>
+
         </div>
       </section>
     </main>
