@@ -1,21 +1,21 @@
 [
   {
     "id": "ssafy-blind",
-    "title": "SSAFY BLIND",
-    "tagline": "Mattermost API로 교육생 여부만 확인하고 자체 JWT로 완전 익명을 보장하는 SSAFY 전용 커뮤니티",
-    "period": "2026.03 ~ (개발 중)",
+    "title": "SSAFY SOOP",
+    "tagline": "Mattermost 인증 프록시 + 자체 JWT로 완전 익명을 보장하는 SSAFY 교육생 전용 커뮤니티 — ssafy-soop.site 배포",
+    "period": "2026.03 ~ 2026.06",
     "role": "개인 프로젝트 (기획·백엔드·프론트엔드)",
     "context": "SSAFY 15기 교육 기간 중 사이드 프로젝트",
-    "stack": ["Java 17", "Spring Boot 3", "Spring Security", "JPA", "JWT", "React 18", "TailwindCSS"],
+    "stack": ["Java 17", "Spring Boot 3", "Spring Security", "JPA", "JWT", "Flyway", "React 18", "TailwindCSS"],
     "repo": "https://github.com/rilac/SSAFY_BLIND",
-    "demo": null,
+    "demo": "https://ssafy-soop.site",
     "slidesPath": null,
     "detailPath": "projects/ssafy-blind.html",
     "code": "JWT + ANON",
     "highlights": [
-      "Mattermost API 프록시로 교육생 여부만 확인 후 자체 JWT 발급 — 신원 노출 없는 완전 익명 구조",
-      "PostResponse에서 작성자 정보를 의도적으로 제거해 API 레벨에서 익명을 강제",
-      "조회수 벌크 UPDATE · N+1 해결(LEFT JOIN COUNT) · Cascade 삭제 등 JPA 성능/안정성 보강"
+      "Mattermost API 프록시로 교육생 여부만 확인 후 자체 JWT 발급 — API 응답에서 작성자 정보를 완전히 제거해 아키텍처 레벨 익명성 보장",
+      "Access(30분) · Refresh(14일) 토큰 분리, SHA-256 해시 저장, Delete-on-rotate 회전 전략으로 탈취 위협 최소화",
+      "22개 테스트 클래스 · 108개 케이스, Flyway 6단계 마이그레이션, 로그인 레이트 리밋(5회/300s) 등 운영 품질 확보 후 ssafy-soop.site 배포"
     ]
   },
   {
