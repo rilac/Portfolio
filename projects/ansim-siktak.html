@@ -66,6 +66,7 @@
               <a class="btn" href="https://github.com/rilac/Ansim-Siktak" target="_blank" rel="noreferrer">GitHub 보기</a>
               <a class="btn" href="../index.html#projects">목록으로</a>
             </div>
+            <p class="demo-note muted">※ 식당 검색·조회는 로그인 없이 가능하며, 프로필·후기·관리자 기능은 로그인이 필요합니다.</p>
           </div>
           <aside class="card detail-summary reveal">
             <div class="metric"><strong>2026.05 ~ 2026.06</strong><span class="muted">약 6주 · 배포 완료</span></div>
@@ -237,6 +238,17 @@
               <li><strong>임대연 (팀장 · 백엔드)</strong> — Phantom Token + Redis 인증, 33테이블 DB 설계·출처 3계층 분리, 쿼드트리 전국 시딩, 생성형 AI 3종 연동(링크 추출·재료 추정·챗봇), 안전도 판정 로직, 활동 로깅.</li>
               <li><strong>서현식 (팀원 · 프론트엔드 · 인프라)</strong> — Vue 3 SPA, 네이버 지도 기반 식당 탐색 UI, 인프라 및 배포.</li>
             </ul>
+          </article>
+
+          <article class="card value-card reveal">
+            <h2>문제 해결</h2>
+            <p><strong>콜드스타트 빈 DB를, 쿼리당 45건만 주는 카카오 API로 전국 식당까지 채워야 하는 문제를 해결했습니다.</strong></p>
+            <div class="background-grid">
+              <div><h3>문제</h3><p>서비스 첫 기동 시 DB가 비어 있어 검색 결과가 없는데, 카카오 로컬 키워드 검색은 한 쿼리당 최대 45건(<code>size 15 × page 3</code>)만 반환해 전국 데이터를 모을 수 없었습니다.</p></div>
+              <div><h3>원인</h3><p>카카오 로컬 API의 페이지네이션 상한과 키워드 검색의 지역 편향 때문에, 단순 반복 호출로는 누락되는 지역이 발생했습니다.</p></div>
+              <div><h3>시도</h3><p>대한민국 바운딩 박스를 결과가 45건 이하가 될 때까지 4분할 재귀(쿼드트리)하고, 타일 경계 중복은 place id로 dedupe, 동명 오탐은 <code>detectBrandId</code>로 차단했습니다. <code>SeedRunner</code>로 시딩을 멱등화했습니다.</p></div>
+              <div><h3>결과</h3><p>전국 프랜차이즈를 누락 없이 수집하고, <code>brand_seed</code> 플래그로 재기동해도 중복 INSERT 0건의 멱등 시딩을 확보해 콜드스타트 문제를 해소했습니다.</p></div>
+            </div>
           </article>
 
           <article class="card value-card reveal">

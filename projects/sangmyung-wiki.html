@@ -172,6 +172,17 @@
           </article>
 
           <article class="card value-card reveal">
+            <h2>문제 해결</h2>
+            <p><strong>"메일만 보내면 끝"이 아니었던 학교 이메일 인증을, 상태 추적 로그로 안정화했습니다.</strong></p>
+            <div class="background-grid">
+              <div><h3>문제</h3><p><code>@sangmyung.kr</code> 메일 인증에서 전송 실패·코드 만료가 잦아, "재학생만 글쓰기" 제약의 체감 품질이 떨어졌습니다.</p></div>
+              <div><h3>원인</h3><p>외부 SMTP 연동의 비동기·실패 상태가 어디에도 남지 않아, 인증이 왜 막혔는지 추적할 단서가 없었습니다.</p></div>
+              <div><h3>시도</h3><p>인증 요청·검증의 각 단계를 인증 로그 테이블에 적재하고, 이 로그를 기반으로 재발송 제한·만료 정책을 얹었습니다.</p></div>
+              <div><h3>결과</h3><p>인증 실패 원인을 로그로 즉시 추적할 수 있게 돼 디버깅이 쉬워졌고 무분별한 재전송을 차단했습니다. 외부 연동의 "상태"를 데이터로 남기는 설계 원칙을 세웠습니다.</p></div>
+            </div>
+          </article>
+
+          <article class="card value-card reveal">
             <h2>깨달은 점</h2>
             <ol class="lessons">
               <li>

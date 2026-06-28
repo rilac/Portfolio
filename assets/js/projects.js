@@ -75,13 +75,23 @@
     actions.className = "project-actions";
     actions.appendChild(createActionLink(project.detailPath, "자세히 보기", "btn-primary"));
     if (project.repo) actions.appendChild(createActionLink(project.repo, "GitHub"));
-    if (project.demo) actions.appendChild(createActionLink(project.demo, "Demo"));
+    if (project.demo) {
+      const demoLink = createActionLink(project.demo, "Demo");
+      if (project.demoNote) demoLink.title = project.demoNote;
+      actions.appendChild(demoLink);
+    }
 
     body.appendChild(meta);
     body.appendChild(titleWrap);
     body.appendChild(chipList);
     body.appendChild(points);
     body.appendChild(actions);
+    if (project.demo && project.demoNote) {
+      const demoNote = document.createElement("p");
+      demoNote.className = "demo-note muted";
+      demoNote.textContent = `데모: ${project.demoNote}`;
+      body.appendChild(demoNote);
+    }
 
     article.appendChild(thumb);
     article.appendChild(body);
@@ -99,6 +109,26 @@
     note.className = "muted";
     note.textContent = message;
     grid.appendChild(note);
+
+    const fallback = [
+      ["projects/ansim-siktak.html", "안심식탁 — 알러지 안전도 판정 외식 플랫폼"],
+      ["projects/ssafy-blind.html", "SSAFY SOOP — 익명 커뮤니티 플랫폼"],
+      ["projects/ssafy-spring-study.html", "SSAFY Spring 스터디 — 공동 리더 및 강의 담당"],
+      ["projects/sangmyung-wiki.html", "Sangmyung_Wiki — 졸업 캡스톤"],
+      ["projects/bootblog.html", "BootBlog — 멀티 유저 블로그"],
+    ];
+    const list = document.createElement("ul");
+    list.className = "point-list";
+    list.style.marginTop = "16px";
+    fallback.forEach(([href, label]) => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = href;
+      a.textContent = label;
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+    grid.appendChild(list);
   }
 
   fetch("data/projects.json")
