@@ -371,6 +371,23 @@
 
       <article class="project">
         <div class="project-head">
+          <h3>안심식탁 (관통 PJT · 팀장 · 백엔드)</h3>
+          <span class="project-meta">2026.05 ~ 2026.06 (약 6주) · SSAFY 15기 관통 PJT 최종 · 배포 완료</span>
+        </div>
+        <p class="role-line">팀장 · 백엔드 전반 (팀 2명) — 인증·데이터·생성형 AI 연동 설계·구현</p>
+        <p class="tagline">알러지·기피 프로필 기준으로 식당 메뉴 안전도(안전·주의·위험)를 자동 판정하고, 데이터 없는 메뉴는 생성형 AI로 보완하는 외식 안전 플랫폼입니다.</p>
+        <ul class="chip-list" style="margin-bottom: 3mm;"><li>Java 17</li><li>Spring Boot 3.3</li><li>Spring Security</li><li>Spring AI</li><li>Redis</li><li>MyBatis</li><li>MySQL 8</li><li>Vue 3</li></ul>
+        <p class="links">데모: <a href="https://ansim-siktak.site">ansim-siktak.site</a> · GitHub: <a href="https://github.com/rilac/Ansim-Siktak">github.com/rilac/Ansim-Siktak</a></p>
+        <ul class="highlights">
+          <li>Phantom Token + Redis 인증 — 원본 JWT는 서버에만, 클라이언트엔 SHA-256 해시 / Rotation·<code>typ</code> 검증·즉시 철회</li>
+          <li>데이터 출처 3계층(공식·사용자보강·AI추정) 물리 분리 + 신뢰도 기반 판정 — AI 추정은 위험 승격 금지</li>
+          <li>카카오 로컬 45건 한계를 전국 쿼드트리 4분할 재귀로 돌파, <code>SeedRunner</code> 멱등 시딩으로 콜드스타트 해결</li>
+          <li>네이버 링크 Apollo state를 Spring AI 구조화 출력으로 파싱해 식당·메뉴 자동 등록 (카카오는 결정적 파싱 하이브리드)</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
           <h3>SSAFY BLIND</h3>
           <span class="project-meta">2026.03 ~ (개발 중) · 개인 사이드 프로젝트</span>
         </div>

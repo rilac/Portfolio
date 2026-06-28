@@ -1,5 +1,24 @@
 [
   {
+    "id": "ansim-siktak",
+    "title": "안심식탁",
+    "tagline": "내 알러지·기피 프로필 기준으로 식당 메뉴의 안전도(안전·주의·위험)를 자동 판정하고, 데이터 없는 메뉴는 생성형 AI로 보완하는 외식 안전 플랫폼 — ansim-siktak.site 배포",
+    "period": "2026.05 ~ 2026.06 (약 6주)",
+    "role": "팀장 · 백엔드 (팀 2명)",
+    "context": "SSAFY 15기 관통 PJT 최종",
+    "stack": ["Java 17", "Spring Boot 3.3", "Spring Security", "Spring AI", "Redis", "MyBatis", "MySQL 8", "Vue 3"],
+    "repo": "https://github.com/rilac/Ansim-Siktak",
+    "demo": "https://ansim-siktak.site",
+    "slidesPath": null,
+    "detailPath": "projects/ansim-siktak.html",
+    "code": "SAFE TABLE",
+    "highlights": [
+      "원본 JWT는 Redis에만 두고 클라이언트엔 SHA-256 해시만 전달하는 Phantom Token 인증 설계 — Access(30분)·Refresh(14일) 분리, 토큰 로테이션·typ 검증·즉시 철회로 탈취 위협 최소화",
+      "카카오 로컬 검색의 쿼리당 45건 한계를 전국 바운딩박스 쿼드트리 4분할 재귀로 돌파, SeedRunner 멱등 시딩으로 빈 DB(콜드스타트) 문제 해결",
+      "네이버 지도 링크 한 줄이면 Apollo state를 Spring AI 구조화 출력으로 파싱해 식당·메뉴 자동 등록 (카카오는 결정적 파싱 하이브리드)"
+    ]
+  },
+  {
     "id": "ssafy-blind",
     "title": "SSAFY SOOP",
     "tagline": "Mattermost 인증 프록시 + 자체 JWT로 완전 익명을 보장하는 SSAFY 교육생 전용 커뮤니티 — ssafy-soop.site 배포",
