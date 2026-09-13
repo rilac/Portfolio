@@ -1,107 +1,40 @@
-# 임대연 포트폴리오
+# 임대연 · Backend Engineer Portfolio
 
-Pure HTML, CSS, Vanilla JavaScript로 구현한 정적 포트폴리오 사이트입니다.
+제출용 슬라이드 덱 형태의 포트폴리오입니다. 1280×720(16:9) 12장으로 구성되며,
+브라우저에서 그대로 열람하거나 **PDF로 저장** 버튼으로 12장 전체를 PDF로 내려받을 수 있습니다.
 
-배포: <https://rilac.github.io/Portfolio/>
+- 배포: https://rilac.github.io/Portfolio/
+- 방향키(← →)로 슬라이드 이동
 
-## 실행
+## 구성
 
-```bash
-python3 -m http.server 8000
+| # | 슬라이드 |
+|---|---|
+| 1 | Cover |
+| 2 | Profile & Tech Stack (한 줄 소개 · 학력 · 자격 · 활동 · 기술 스택) |
+| 3 | Projects Overview (4개 프로젝트 · 기간 / 팀 규모 / 내 역할) |
+| 4–5 | 엔테나 — 서비스·아키텍처 / 문제 해결 |
+| 6–7 | MoToK — 서비스·아키텍처 / 문제 해결 |
+| 8–9 | 안심식탁 — 서비스·데이터 / 인증·AI 설계 |
+| 10 | SSAFY SOOP — 1인 기획·개발·배포·운영 |
+| 11 | 회고 — 못한 것 · 한계 · 배운 것 |
+| 12 | Closing |
+
+## 파일 구조
+
+```
+index.html                 슬라이드 12장 (마크업)
+assets/css/deck.css        디자인 시스템 · 슬라이드 레이아웃
+assets/js/deck.js          슬라이드 네비게이션 · PDF 내보내기(html2canvas + jsPDF)
+assets/img/shots/          프로젝트 실제 동작 화면 (1500px JPEG로 리사이즈)
+assets/img/diagrams/       아키텍처 다이어그램
+assets/img/tech/           기술 스택 아이콘 (devicon / simple-icons SVG)
+assets/files/              이력서 PDF
+screenshots/               원본 스크린샷 (배포 대상 아님 · .gitignore 대상 검토)
+지침/                       포트폴리오 작성 지침 · 참고 자료 (배포 대상 아님)
 ```
 
-브라우저에서 `http://localhost:8000`으로 접속합니다.
+## 원칙
 
-## 폴더 구조
-
-```
-portfolio/
-├── index.html                 # 메인 원페이지 포트폴리오
-├── favicon.svg                # 사이트 아이콘
-├── robots.txt                 # 검색 엔진 크롤링 가이드
-├── sitemap.xml                # 사이트맵
-├── .nojekyll                  # GitHub Pages Jekyll 처리 비활성화
-│
-├── projects/                  # 프로젝트 상세 페이지 (5개)
-│   ├── ansim-siktak.html
-│   ├── ssafy-blind.html       # 콘텐츠상 SSAFY SOOP (파일명/URL은 유지)
-│   ├── ssafy-spring-study.html
-│   ├── sangmyung-wiki.html
-│   └── bootblog.html
-│
-├── data/
-│   └── projects.json          # 메인 카드 렌더링 데이터
-│
-├── assets/
-│   ├── css/                   # 디자인 토큰 · 컴포넌트 · 섹션 스타일
-│   ├── js/                    # 다크모드 · 네비 · 프로젝트 · 애니메이션 · 이메일 모달
-│   ├── img/                   # 프로필 이미지 · 프로젝트 썸네일 (확장 예정)
-│   └── files/                 # 다운로드 자산 (PDF · PPTX)
-│       ├── 임대연_이력서.pdf
-│       ├── 임대연_포트폴리오.pdf
-│       ├── bootblog-deck.pptx
-│       └── sangmyung-wiki-deck.pptx
-│
-├── print/
-│   └── portfolio-print.html   # 포트폴리오 PDF 생성용 단일 페이지 (A4 인쇄 최적화)
-│
-├── _notion-source/            # 로컬 보관용 Notion 원본 자료 (gitignored)
-│
-├── PLAN.md                    # 초기 기획 문서
-└── README.md
-```
-
-## PDF 재생성
-
-포트폴리오 PDF를 갱신하려면 **먼저 `print/portfolio-print.html`을 사이트 콘텐츠와 일치하도록 수정한 뒤** PDF를 다시 내보냅니다.
-
-Windows (현재 개발 환경, PowerShell/CMD):
-
-```powershell
-chrome.exe --headless --disable-gpu --no-pdf-header-footer `
-  --print-to-pdf="assets/files/임대연_포트폴리오.pdf" `
-  --virtual-time-budget=10000 `
-  "file:///D:/IdeaProjects/Portfolio/print/portfolio-print.html"
-```
-
-macOS:
-
-```bash
-"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
-  --headless --disable-gpu --no-pdf-header-footer \
-  --print-to-pdf="assets/files/임대연_포트폴리오.pdf" \
-  --virtual-time-budget=10000 \
-  "file://$(pwd)/print/portfolio-print.html"
-```
-
-이력서 PDF는 외부에서 별도로 작성한 뒤 `assets/files/임대연_이력서.pdf`로 덮어쓰기만 하면 됩니다.
-
-## ⚠️ 콘텐츠 변경 시 동기화 체크리스트
-
-사이트 본문(`index.html`, `projects/*.html`, `data/projects.json`)을 고치면 아래 **다운로드 자산도 함께** 갱신해야 합니다. 한 곳만 고치면 채용 담당자가 받는 PDF가 사이트와 모순됩니다.
-
-- [ ] `print/portfolio-print.html` — 사이트와 동일하게 수정 (프로젝트명·기간·배포상태·데모 링크)
-- [ ] `assets/files/임대연_포트폴리오.pdf` — 위 print 페이지로 재생성
-- [ ] `assets/files/임대연_이력서.pdf` — 최신 이력(프로젝트·배포·자격) 반영해 덮어쓰기
-- [ ] `assets/files/*.pptx` — 발표자료 내용이 바뀌었으면 교체
-- [ ] `index.html` 푸터 `Last updated` 날짜 + `sitemap.xml` lastmod 갱신
-- [ ] `data/projects.json`에 프로젝트를 추가하면 `index.html`의 `<noscript>` 목록도 함께 추가
-
-## 배포
-
-`main` 브랜치에 push하면 GitHub Pages가 자동 배포합니다 (1~2분 소요).
-
-레포 이름이 바뀌거나 커스텀 도메인을 연결하면 HTML, `robots.txt`, `sitemap.xml`의 URL을 일괄 치환하세요:
-
-```bash
-# macOS
-grep -rl "rilac.github.io/Portfolio" . | xargs sed -i '' 's|rilac.github.io/Portfolio|실제도메인|g'
-# Linux / Git Bash
-grep -rl "rilac.github.io/Portfolio" . | xargs sed -i 's|rilac.github.io/Portfolio|실제도메인|g'
-```
-
-```powershell
-# Windows PowerShell
-Get-ChildItem -Recurse -Include *.html,*.txt,*.xml |
-  ForEach-Object { (Get-Content $_ -Raw) -replace 'rilac.github.io/Portfolio','실제도메인' | Set-Content $_ -Encoding utf8 }
-```
+포트폴리오에 적은 수치와 기여 내용은 각 프로젝트 레포의 **코드·커밋에서 직접 확인한 것**만 사용했습니다.
+측정 기록이 없는 항목(커버리지, 부하 테스트 결과, 동시접속 수 등)은 쓰지 않았습니다.

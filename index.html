@@ -1,426 +1,839 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="백엔드 중심 풀스택 개발자 임대연의 포트폴리오입니다. Spring Boot, JPA, Spring Security, React 프로젝트와 학습 활동을 소개합니다.">
-    <meta name="theme-color" content="#2563eb" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)">
-    <link rel="canonical" href="https://rilac.github.io/Portfolio/">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://rilac.github.io/Portfolio/">
-    <meta property="og:title" content="임대연 | Backend Engineer Portfolio">
-    <meta property="og:description" content="비즈니스를 이해하고, 함께 성장하며, 왜를 끝까지 파고드는 백엔드 개발자 임대연입니다.">
-    <meta property="og:image" content="https://rilac.github.io/Portfolio/assets/img/profile.jpg">
-    <meta property="og:locale" content="ko_KR">
-    <meta property="og:site_name" content="임대연 포트폴리오">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="임대연 | Backend Engineer Portfolio">
-    <meta name="twitter:description" content="Spring Boot · JPA · Spring Security 기반 백엔드 개발자 임대연의 프로젝트와 학습 활동.">
-    <meta name="twitter:image" content="https://rilac.github.io/Portfolio/assets/img/profile.jpg">
-    <title>임대연 | Backend Engineer Portfolio</title>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/variables.css">
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <script>
-      (function () {
-        var stored = localStorage.getItem("theme");
-        var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-        document.documentElement.dataset.theme = theme;
-      })();
-    </script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">본문으로 이동</a>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="#home" aria-label="임대연 포트폴리오 홈">
-          <span class="brand-mark">DY</span>
-          <span>임대연</span>
-        </a>
-        <nav id="primary-nav" class="site-nav" aria-label="주요 메뉴">
-          <ul class="nav-links">
-            <li><a class="nav-link is-active" href="#home">Home</a></li>
-            <li><a class="nav-link" href="#about">About</a></li>
-            <li><a class="nav-link" href="#skills">Skills</a></li>
-            <li><a class="nav-link" href="#projects">Projects</a></li>
-            <li><a class="nav-link" href="#activities">Activities</a></li>
-            <li><a class="nav-link" href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="nav-actions">
-          <button class="icon-button" type="button" data-theme-toggle aria-label="다크 모드로 전환" aria-pressed="false" title="다크 모드"></button>
-          <button class="icon-button menu-toggle" type="button" data-menu-toggle aria-label="메뉴 열기" aria-controls="primary-nav" aria-expanded="false">☰</button>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="백엔드 개발자 임대연 포트폴리오 — 엔테나 · MoToK · 안심식탁 · SSAFY SOOP">
+<title>임대연 | Backend Engineer Portfolio</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/deck.css">
+</head>
+<body>
+<div class="deck" id="deck">
+
+<!-- ═══ 1. COVER ═══ -->
+<div class="slide cover active">
+  <div class="cover-bg"></div>
+  <div class="cover-inner">
+    <div>
+      <div class="cv-label">BACKEND ENGINEER · PORTFOLIO 2026</div>
+    </div>
+    <div>
+      <div class="cv-name">임대연</div>
+      <div class="cv-role">Backend Engineer &nbsp;·&nbsp; Java / Spring Boot</div>
+      <div class="cv-rule"></div>
+      <div class="cv-tag">
+        <b>틀린 값이 남지 않는 서버</b>를 만듭니다.<br>
+        토큰을 즉시 폐기할 수 있게, 중복 요청이 예외를 만들지 않게, 원장이 나중에 고쳐지지 않게 —<br>
+        네 개의 서비스에서 <b>인증 · 정합성 · 데이터 파이프라인</b>을 맡았습니다.
+      </div>
+    </div>
+    <div class="cover-contact">
+      <div><div class="cc-label">EMAIL</div><div class="cc-value">eodos6480@gmail.com</div></div>
+      <div><div class="cc-label">GITHUB</div><div class="cc-value">github.com/rilac</div></div>
+      <div><div class="cc-label">BLOG</div><div class="cc-value">velog.io/@asd990702</div></div>
+      <div><div class="cc-label">ALGORITHM</div><div class="cc-value">acmicpc.net/user/asd990702</div></div>
+    </div>
+  </div>
+  <div class="sn">01</div>
+</div>
+
+<!-- ═══ 2. PROFILE & TECH STACK ═══ -->
+<div class="slide">
+  <div class="sb">
+    <div class="prog"><span class="on">Profile</span><span>Overview</span><span>엔테나</span><span>MoToK</span><span>안심식탁</span><span>SOOP</span><span>회고</span></div>
+    <div class="st">Profile &amp; <span class="a">Tech Stack</span></div>
+
+    <div class="row">
+      <div class="col f1">
+        <div class="ov-card">
+          <div class="ov-head"><span class="ol">SECTION 01</span><span class="ot">Education</span></div>
+          <div class="ov-body">
+            <div class="pf hi">
+              <div class="pf-name">삼성 청년 SW·AI 아카데미 (SSAFY) 15기</div>
+              <div class="pf-sub">2026.01 ~ 2026.12 예정 · 재학 중</div>
+              <div class="pf-detail">관통 · 공통 · 자율 프로젝트 3회 수행 (본 포트폴리오 프로젝트 3건)</div>
+            </div>
+            <div class="pf">
+              <div class="pf-name">상명대학교 (서울) · 경영학 &amp; 컴퓨터과학 복수전공</div>
+              <div class="pf-sub">2018.03 ~ 2025.09 졸업</div>
+              <div class="pf-detail">요구사항 뒤의 목적을 먼저 확인하는 습관이 경영학 전공에서 왔습니다</div>
+            </div>
+            <div class="pf">
+              <div class="pf-name">KIC캠퍼스 Java 풀스택 국비지원교육</div>
+              <div class="pf-sub">2023.01 ~ 2023.06 (6개월) 수료</div>
+            </div>
+          </div>
+        </div>
+        <div class="ov-card">
+          <div class="ov-head"><span class="ol">SECTION 02</span><span class="ot">Certificate &amp; Record</span></div>
+          <div class="ov-body">
+            <div class="pf hi">
+              <div class="pf-name">삼성 SW 역량테스트 A형</div>
+              <div class="pf-sub">2026.04.22 취득</div>
+            </div>
+            <div class="pf">
+              <div class="pf-name">2026 SSAFY AI 챌린지 (Kaggle · 팀 A175)</div>
+              <div class="pf-sub">팀 최고 Private 0.89</div>
+              <div class="pf-detail">Qwen2.5-VL 파인튜닝 실험과 데이터 처리를 맡아 멀티모달 학습 파이프라인을 경험</div>
+            </div>
+            <div class="pf">
+              <div class="pf-name">TOEIC 765</div>
+              <div class="pf-sub">2024.08 취득</div>
+            </div>
+          </div>
+        </div>
+        <div class="ov-card grow">
+          <div class="ov-head"><span class="ol">SECTION 03</span><span class="ot">Activity</span></div>
+          <div class="ov-body">
+            <div class="pf hi">
+              <div class="pf-name">SSAFY Spring Boot 스터디 · 공동 리더 (약 20명)</div>
+              <div class="pf-sub">2026.03 ~ 진행 중</div>
+              <div class="pf-detail">"명세서를 읽고 → 직접 구현 → 강의 영상으로 검증"의 학습 사이클을 설계하고,
+                실습 레퍼런스 코드와 <b>강의 영상 5편</b>을 제작했습니다.<br>
+                <span style="font-family:var(--mono);font-size:9.5px">https://www.ssafy-study.site/studies/1</span></div>
+            </div>
+            <div class="pf">
+              <div class="pf-name">알고리즘 · 기술 블로그</div>
+              <div class="pf-detail" style="font-family:var(--mono);font-size:9.5px;line-height:1.7">
+                https://www.acmicpc.net/user/asd990702<br>
+                https://github.com/rilac/BKJN<br>
+                https://velog.io/@asd990702</div>
+            </div>
+          </div>
         </div>
       </div>
-    </header>
 
-    <main id="main">
-      <section id="home" class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy reveal">
-            <p class="eyebrow">Backend Engineer · Java / Spring Boot</p>
-            <h1>비즈니스를 이해하고, 왜를 끝까지 파고드는 개발자 임대연입니다.</h1>
-            <p class="lead">경영학과 컴퓨터과학을 함께 공부하며 사용자와 도메인을 먼저 이해하려고 합니다. Spring Boot 기반 백엔드 개발을 중심으로 React 프론트엔드까지 연결해 실제로 동작하는 서비스를 만듭니다.</p>
-            <div class="btn-row">
-              <a class="btn btn-primary" href="assets/files/임대연_이력서.pdf" download>이력서 다운로드</a>
-              <a class="btn btn-primary" href="assets/files/임대연_포트폴리오.pdf" download>포트폴리오 PDF</a>
-              <a class="btn" href="#projects">프로젝트 보기</a>
-              <a class="btn" href="https://github.com/rilac" target="_blank" rel="noreferrer">GitHub</a>
-              <a class="btn" href="mailto:eodos6480@gmail.com" data-email-modal-trigger>이메일 보내기</a>
-            </div>
-          </div>
-          <aside class="hero-panel reveal" aria-label="프로필 사진">
-            <figure class="profile-frame">
-              <img src="assets/img/profile.jpg" alt="임대연 프로필 사진" width="1061" height="1386" fetchpriority="high" decoding="async">
-            </figure>
-          </aside>
-        </div>
-      </section>
-
-      <section id="about" class="about">
-        <div class="container about-grid">
-          <div class="about-summary reveal" aria-label="개발 역량 요약">
-            <div class="card hero-card">
-              <p class="eyebrow">Primary Focus</p>
-              <h2>Spring Boot 기반 백엔드</h2>
-              <p>인증, 예외 처리, 트랜잭션 흐름을 중심으로 안정적인 API 구조를 설계합니다.</p>
-              <ul class="chip-list" role="list">
-                <li class="chip">Java</li>
-                <li class="chip">Spring Boot 3</li>
-                <li class="chip">Spring Security</li>
-                <li class="chip">JPA</li>
-                <li class="chip">JWT</li>
-                <li class="chip">React</li>
-              </ul>
-            </div>
-            <div class="about-aside">
-              <div class="card profile-facts">
-                <p class="eyebrow">Profile</p>
-                <dl class="facts-list">
-                  <div><dt>학교</dt><dd>상명대학교 (서울)</dd></div>
-                  <div><dt>전공</dt><dd>경영학 · 컴퓨터과학 복수전공</dd></div>
-                  <div><dt>학번 · 졸업</dt><dd>18학번 · 2025.09 졸업</dd></div>
-                  <div><dt>현재</dt><dd>SSAFY 15기 (2026.01 ~ 진행 중)</dd></div>
-                </dl>
-              </div>
-              <div class="quick-stats">
-                <div class="stat">
-                  <strong>5</strong>
-                  <span class="muted">대표 프로젝트</span>
-                </div>
-                <div class="stat">
-                  <strong>약 20명</strong>
-                  <span class="muted">스터디 운영</span>
-                </div>
-                <div class="stat">
-                  <strong>A형</strong>
-                  <span class="muted">SW 역량테스트</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="about-content reveal">
-            <div class="section-header">
-              <p class="eyebrow">About Me</p>
-              <h2>서비스의 맥락과 구현의 원리를 같이 보는 개발자</h2>
-              <p class="lead">백엔드 개발을 주력으로 하되, 화면에서 API까지 이어지는 사용자 흐름 전체를 이해하고 구현하는 것을 중요하게 생각합니다.</p>
-            </div>
-            <div class="value-grid">
-              <article class="card value-card">
-                <span class="value-index">01</span>
-                <h3>비즈니스를 이해합니다</h3>
-                <p>경영학·컴퓨터과학 복수전공 경험을 바탕으로 기능 요구사항 뒤의 목적과 사용자 가치를 먼저 확인합니다.</p>
-              </article>
-              <article class="card value-card">
-                <span class="value-index">02</span>
-                <h3>함께 성장합니다</h3>
-                <p>SSAFY에서 약 20명 규모의 Spring Boot 스터디를 공동 운영하며 강의와 실습 코드를 제작했습니다.</p>
-              </article>
-              <article class="card value-card">
-                <span class="value-index">03</span>
-                <h3>원리를 파고듭니다</h3>
-                <p>Spring AOP를 학습할 때 <code>@Transactional</code>이 프록시 기반으로 동작해 <code>private</code> 메서드에는 적용되지 않는다는 사실을, 디버거로 호출 스택을 따라가며 직접 확인했습니다.</p>
-              </article>
-            </div>
+      <div class="col f1">
+        <div class="ov-card">
+          <div class="ov-head"><span class="ol">SECTION 04</span><span class="ot">한 줄 소개</span></div>
+          <div class="ov-body" style="gap:7px">
+            <div class="ct" style="font-size:12px;font-weight:700;color:var(--head);line-height:1.5">
+              "지금 동작한다"와 "동시에 들어와도 동작한다"는 다른 문제라고 생각합니다.<br>
+              서버가 <span style="color:var(--accent)">틀린 값을 남기지 않게</span> 만드는 것을 제 일로 봅니다.</div>
+            <div class="bi"><b>가장 깊이 공부한 것</b> — 인증 토큰의 수명 관리(팬텀 토큰 · 회전 · 즉시 철회)와
+              동시성 아래의 멱등성(Redis Lua · SETNX · <code class="k">INSERT IGNORE</code> · DB 트리거). 네 프로젝트에서 모두 이 축을 맡았습니다.</div>
+            <div class="bi"><b>단기 목표</b> — 틀리면 곧바로 사고가 되는 도메인(인증 · 정산 · 주문)에서,
+              테스트와 관측 지표까지 포함해 기능을 "끝내는" 백엔드가 되는 것.</div>
+            <div class="bi"><b>중장기 목표</b> — 트래픽이 늘어도 정합성이 무너지지 않는 시스템을 설계하고,
+              그 판단의 근거를 <b>숫자로 설명할 수 있는</b> 사람이 되는 것.</div>
           </div>
         </div>
-      </section>
-
-      <section id="skills" class="skills">
-        <div class="container">
-          <div class="section-header reveal">
-            <p class="eyebrow">Skills</p>
-            <h2>Spring Boot 중심의 백엔드와 서비스 구현 역량</h2>
-            <p class="lead">주력은 Java/Spring 백엔드이며, React 기반 프론트엔드와 AWS 배포 경험을 함께 갖추고 있습니다.</p>
-            <ul class="chip-list skill-legend" role="list" aria-label="숙련도 범례">
-              <li class="chip" data-level="primary">주력</li>
-              <li class="chip">사용</li>
-              <li class="chip" data-level="learning">학습 중</li>
-            </ul>
-          </div>
-          <div class="skills-grid">
-            <article class="card skill-card main-skill reveal">
-              <h3>Backend</h3>
-              <p>주력 기술 영역입니다. 인증, 영속성, 예외 처리, 트랜잭션 흐름을 서비스 구조에 맞춰 설계합니다.</p>
-              <ul class="chip-list" role="list">
-                <li class="chip" data-level="primary">Java</li>
-                <li class="chip" data-level="primary">Spring Boot 3</li>
-                <li class="chip" data-level="primary">Spring Security</li>
-                <li class="chip" data-level="primary">JPA/Hibernate</li>
-                <li class="chip" data-level="primary">Spring AOP</li>
-              </ul>
-            </article>
-            <article class="card skill-card reveal">
-              <h3>Frontend</h3>
-              <p>API와 맞물리는 화면 흐름을 이해하며, 캡스톤과 SSAFY SOOP에서 Vite 기반 React 프로젝트를 구현했습니다.</p>
-              <ul class="chip-list" role="list">
-                <li class="chip">React</li>
-                <li class="chip">Vite</li>
-                <li class="chip">JavaScript ES6+</li>
-                <li class="chip">TailwindCSS</li>
-              </ul>
-            </article>
-            <article class="card skill-card reveal">
-              <h3>Database</h3>
-              <p>개발과 운영 환경에 맞춰 관계형 데이터베이스를 사용하고, JPA 모델링과 쿼리 흐름을 점검합니다.</p>
-              <ul class="chip-list" role="list">
-                <li class="chip">MySQL</li>
-                <li class="chip">H2</li>
-                <li class="chip" data-level="learning">PostgreSQL</li>
-              </ul>
-            </article>
-            <article class="card skill-card reveal">
-              <h3>DevOps</h3>
-              <p>안심식탁을 AWS EC2 + RDS(MySQL)로 배포하고, 캡스톤에서 S3·Docker 기반 환경을 구성했습니다.</p>
-              <ul class="chip-list" role="list">
-                <li class="chip">AWS EC2</li>
-                <li class="chip">RDS</li>
-                <li class="chip">S3</li>
-                <li class="chip">Docker</li>
-              </ul>
-            </article>
-            <article class="card skill-card reveal">
-              <h3>AI Experience</h3>
-              <p>Kaggle SSAFY AI 챌린지에서 Qwen2.5-VL 파인튜닝 경험을 쌓았습니다.</p>
-              <ul class="chip-list" role="list">
-                <li class="chip" data-level="learning">Kaggle</li>
-                <li class="chip" data-level="learning">Qwen2.5-VL</li>
-                <li class="chip" data-level="learning">Fine-tuning</li>
-              </ul>
-            </article>
-            <article class="card skill-card reveal">
-              <h3>Problem Solving</h3>
-              <p>백준 알고리즘 풀이를 <a class="text-link" href="https://github.com/rilac/BKJN" target="_blank" rel="noreferrer">GitHub(rilac/BKJN)</a>에 기록하며, 삼성 SW 역량테스트 A형 취득으로 구현 기반 문제 해결력을 다졌습니다.</p>
-              <ul class="chip-list" role="list">
-                <li class="chip">BOJ</li>
-                <li class="chip">Algorithm</li>
-                <li class="chip">Samsung A형</li>
-              </ul>
-            </article>
-            <article class="card skill-card reveal">
-              <h3>Tools &amp; Collaboration</h3>
-              <p>Git 기반 협업과 Gradle 빌드, IntelliJ + Postman으로 API를 만들고 검증합니다. 문서·기획은 Notion으로 정리합니다.</p>
-              <ul class="chip-list" role="list">
-                <li class="chip">Git</li>
-                <li class="chip">GitHub</li>
-                <li class="chip">Gradle</li>
-                <li class="chip">IntelliJ IDEA</li>
-                <li class="chip">Postman</li>
-                <li class="chip">Notion</li>
-              </ul>
-            </article>
+        <div class="ov-card grow">
+          <div class="ov-head"><span class="ol">SECTION 05</span><span class="ot">Tech Stack</span><span style="margin-left:auto;font-size:10px;opacity:.8">주 스택 · Java / Spring Boot</span></div>
+          <div class="ov-body" style="gap:0">
+            <div class="trow"><span class="tl">LANGUAGE</span><div class="icrow">
+              <span class="ic"><img src="assets/img/tech/java.svg" alt="">Java 17·21</span>
+              <span class="ic"><img src="assets/img/tech/typescript.svg" alt="">TypeScript</span>
+              <span class="ic"><img src="assets/img/tech/javascript.svg" alt="">JavaScript</span>
+              <span class="ic"><img src="assets/img/tech/python.svg" alt="">Python</span>
+            </div></div>
+            <div class="trow"><span class="tl">BACKEND</span><div class="icrow">
+              <span class="ic"><img src="assets/img/tech/si-springboot.svg" alt="">Spring Boot 3·4</span>
+              <span class="ic"><img src="assets/img/tech/si-springsecurity.svg" alt="">Spring Security</span>
+              <span class="ic"><img src="assets/img/tech/hibernate.svg" alt="">JPA / MyBatis</span>
+              <span class="ic"><img src="assets/img/tech/si-jsonwebtokens.svg" alt="">JWT</span>
+              <span class="ic"><img src="assets/img/tech/gradle.svg" alt="">Gradle</span>
+            </div></div>
+            <div class="trow"><span class="tl">DATA</span><div class="icrow">
+              <span class="ic"><img src="assets/img/tech/mysql.svg" alt="">MySQL 8</span>
+              <span class="ic"><img src="assets/img/tech/postgresql.svg" alt="">PostgreSQL 18</span>
+              <span class="ic"><img src="assets/img/tech/redis.svg" alt="">Redis 7·8</span>
+              <span class="ic">Flyway</span>
+            </div></div>
+            <div class="trow"><span class="tl">FRONTEND</span><div class="icrow">
+              <span class="ic"><img src="assets/img/tech/react.svg" alt="">React 18·19</span>
+              <span class="ic"><img src="assets/img/tech/vuejs.svg" alt="">Vue 3</span>
+              <span class="ic"><img src="assets/img/tech/vite.svg" alt="">Vite</span>
+              <span class="ic"><img src="assets/img/tech/tailwindcss.svg" alt="">Tailwind</span>
+            </div></div>
+            <div class="trow"><span class="tl">INFRA</span><div class="icrow">
+              <span class="ic"><img src="assets/img/tech/docker.svg" alt="">Docker Compose</span>
+              <span class="ic"><img src="assets/img/tech/amazonwebservices.svg" alt="">AWS EC2·RDS·S3</span>
+              <span class="ic"><img src="assets/img/tech/nginx.svg" alt="">Nginx</span>
+              <span class="ic"><img src="assets/img/tech/gitlab.svg" alt="">GitLab CI</span>
+            </div></div>
+            <div class="trow"><span class="tl">REALTIME</span><div class="icrow">
+              <span class="ic">STOMP / WebSocket</span>
+              <span class="ic"><img src="assets/img/tech/si-livekit.svg" alt="">LiveKit SFU</span>
+              <span class="ic">Spring AI</span>
+            </div></div>
+            <div class="trow"><span class="tl">COLLAB</span><div class="icrow">
+              <span class="ic"><img src="assets/img/tech/git.svg" alt="">Git</span>
+              <span class="ic"><img src="assets/img/tech/jira.svg" alt="">Jira</span>
+              <span class="ic">Notion</span>
+              <span class="ic">Postman · Swagger</span>
+            </div></div>
           </div>
         </div>
-      </section>
-
-      <section id="projects" class="projects">
-        <div class="container">
-          <div class="section-header reveal">
-            <p class="eyebrow">Projects</p>
-            <h2>학습과 실전 구현을 연결한 프로젝트</h2>
-            <p class="lead">개인 사이드 프로젝트, 학습 커뮤니티 운영, 캡스톤, 국비지원 팀프로젝트를 통해 서비스를 직접 만들고 개선했습니다.</p>
-          </div>
-          <div class="projects-grid" data-project-grid>
-            <p class="muted">프로젝트를 불러오는 중입니다.</p>
-          </div>
-          <noscript>
-            <ul class="point-list" style="margin-top:24px">
-              <li><a href="projects/ansim-siktak.html">안심식탁 — 알러지 안전도 판정 외식 플랫폼</a></li>
-              <li><a href="projects/ssafy-blind.html">SSAFY SOOP — 익명 커뮤니티 플랫폼</a></li>
-              <li><a href="projects/ssafy-spring-study.html">SSAFY Spring 스터디 — 공동 리더 및 강의 담당</a></li>
-              <li><a href="projects/sangmyung-wiki.html">Sangmyung_Wiki — 졸업 캡스톤</a></li>
-              <li><a href="projects/bootblog.html">BootBlog — 멀티 유저 블로그</a></li>
-            </ul>
-          </noscript>
-        </div>
-      </section>
-
-      <section id="activities" class="activities">
-        <div class="container activity-grid">
-          <div class="reveal">
-            <div class="section-header">
-              <p class="eyebrow">Activities</p>
-              <h2>교육, 스터디, 인증</h2>
-              <p class="lead">정규 교육과 팀 프로젝트, 알고리즘 평가, 강의 활동을 통해 학습 내용을 실제 결과물로 연결했습니다.</p>
-            </div>
-            <div class="timeline">
-              <article class="timeline-item">
-                <time datetime="2026-01">2026.01 ~ (진행 중 · 12월 수료 예정)</time>
-                <h3>SSAFY 15기 (삼성 청년 SW·AI 아카데미)</h3>
-                <p>Spring Boot 스터디 공동 리더로 활동하며 강의 영상과 실습 코드를 제작하고 있습니다.</p>
-              </article>
-              <article class="timeline-item">
-                <time datetime="2026-04-22">2026.04.22 · 취득</time>
-                <h3>삼성 SW 역량테스트 A형</h3>
-                <p>구현형 알고리즘 문제 해결 역량을 객관적으로 인증받았습니다.</p>
-              </article>
-              <article class="timeline-item">
-                <time datetime="2026-03">2026 · Kaggle</time>
-                <h3>2026 SSAFY AI 챌린지 (팀 A175)</h3>
-                <p>재활용품 이미지 기반 질의응답(Vision-Language) 모델을 개발하는 팀 대회에 참여했습니다. Qwen2.5-VL 파인튜닝 실험과 데이터 처리를 보조하며 멀티모달 모델 학습 파이프라인을 경험했고, 팀 최고 제출은 Private 0.89를 기록했습니다.</p>
-                <figure class="kaggle-evidence">
-                  <img src="assets/img/kaggle.jpg" alt="2026 SSAFY AI 챌린지 제출 결과 화면 — 팀 A175, 최고 Private 0.89" width="1223" height="1191" loading="lazy" decoding="async" style="width:100%;max-width:520px;height:auto;border:1px solid var(--border);border-radius:8px;margin-top:10px">
-                  <figcaption class="muted" style="font-size:0.82rem;margin-top:6px">2026 SSAFY AI 챌린지 · 팀 A175 제출 결과</figcaption>
-                </figure>
-              </article>
-              <article class="timeline-item">
-                <time datetime="2025-09">2018.03 ~ 2025.09</time>
-                <h3>상명대학교 졸업</h3>
-                <p>경영학과 컴퓨터과학을 복수전공했습니다.</p>
-              </article>
-              <article class="timeline-item">
-                <time datetime="2023-06">2023.01 ~ 2023.06</time>
-                <h3>KIC캠퍼스 국비지원교육</h3>
-                <p>6개월 풀스택 교육과정을 수료하며 BootBlog 팀 프로젝트를 진행했습니다.</p>
-              </article>
-            </div>
-          </div>
-          <aside class="card activity-card reveal">
-            <h3>Spring 스터디 강의 · 명세서</h3>
-            <p>"명세서를 읽고 → 직접 구현 → 강의 영상으로 풀이 검증"의 학습 사이클로 운영했습니다. 회차별로 영상과 명세서를 함께 확인할 수 있습니다.</p>
-            <ul class="lecture-list">
-              <li class="lecture-item">
-                <div class="lecture-meta">
-                  <strong>Day 2-1 · 회차 1</strong>
-                  <span class="muted">REST API 기본 — 인사 메시지 반환</span>
-                </div>
-                <div class="lecture-actions">
-                  <a class="btn btn-sm" href="https://youtu.be/QTvBdIQksOg" target="_blank" rel="noreferrer">강의 영상</a>
-                  <a class="btn btn-sm" href="https://www.ssafy-study.site/studies/1/curriculums/2/posts/7" target="_blank" rel="noreferrer">명세서</a>
-                </div>
-              </li>
-              <li class="lecture-item">
-                <div class="lecture-meta">
-                  <strong>Day 2-2 · 회차 2</strong>
-                  <span class="muted">게시글 CRUD REST API</span>
-                </div>
-                <div class="lecture-actions">
-                  <a class="btn btn-sm" href="https://youtu.be/-FGd6NYZvqQ" target="_blank" rel="noreferrer">강의 영상</a>
-                  <a class="btn btn-sm" href="https://www.ssafy-study.site/studies/1/curriculums/2/posts/8" target="_blank" rel="noreferrer">명세서</a>
-                </div>
-              </li>
-              <li class="lecture-item">
-                <div class="lecture-meta">
-                  <strong>Day 3 · 회차 3</strong>
-                  <span class="muted">회원 관리 + UUID 기반 세션 인증</span>
-                </div>
-                <div class="lecture-actions">
-                  <a class="btn btn-sm" href="https://youtu.be/FOwA-AMgENY" target="_blank" rel="noreferrer">강의 영상</a>
-                  <a class="btn btn-sm" href="https://www.ssafy-study.site/studies/1/curriculums/2/posts/9" target="_blank" rel="noreferrer">명세서</a>
-                </div>
-              </li>
-              <li class="lecture-item">
-                <div class="lecture-meta">
-                  <strong>Day 4 · 회차 4</strong>
-                  <span class="muted">ApiResponse&lt;T&gt; 통일 · 도메인 독립성 확보</span>
-                </div>
-                <div class="lecture-actions">
-                  <a class="btn btn-sm" href="https://youtu.be/Ya7wtZzqJcQ" target="_blank" rel="noreferrer">강의 영상</a>
-                  <a class="btn btn-sm" href="https://www.ssafy-study.site/studies/1/curriculums/2/posts/12" target="_blank" rel="noreferrer">명세서</a>
-                </div>
-              </li>
-              <li class="lecture-item">
-                <div class="lecture-meta">
-                  <strong>Day 5 · 회차 5</strong>
-                  <span class="muted">MySQL 영속화 · JPA로 코드 축약</span>
-                </div>
-                <div class="lecture-actions">
-                  <a class="btn btn-sm" href="https://www.youtube.com/watch?v=35_48r9_AcI" target="_blank" rel="noreferrer">강의 영상</a>
-                  <a class="btn btn-sm" href="https://www.ssafy-study.site/studies/1/curriculums/2/posts/14" target="_blank" rel="noreferrer">명세서</a>
-                </div>
-              </li>
-            </ul>
-          </aside>
-        </div>
-      </section>
-
-      <section id="contact" class="contact">
-        <div class="container">
-          <div class="section-header reveal">
-            <p class="eyebrow">Contact</p>
-            <h2>더 자세한 코드와 기록은 아래에서 확인할 수 있습니다</h2>
-          </div>
-          <div class="contact-grid">
-            <a class="card contact-card reveal" href="mailto:eodos6480@gmail.com" data-email-modal-trigger>
-              <span class="eyebrow">Email</span>
-              <h3>eodos6480@gmail.com</h3>
-              <p>프로젝트, 채용, 협업 관련 연락을 받을 수 있습니다.</p>
-            </a>
-            <a class="card contact-card reveal" href="https://github.com/rilac" target="_blank" rel="noreferrer">
-              <span class="eyebrow">GitHub</span>
-              <h3>github.com/rilac</h3>
-              <p>프로젝트 소스 코드와 학습 기록을 확인할 수 있습니다.</p>
-            </a>
-            <a class="card contact-card reveal" href="https://velog.io/@asd990702/posts" target="_blank" rel="noreferrer">
-              <span class="eyebrow">Tech Blog</span>
-              <h3>Velog</h3>
-              <p>개발 과정에서 정리한 글과 문제 해결 기록을 남깁니다.</p>
-            </a>
-            <a class="card contact-card reveal" href="https://www.acmicpc.net/user/asd990702" target="_blank" rel="noreferrer">
-              <span class="eyebrow">Algorithm</span>
-              <h3>Baekjoon</h3>
-              <p>꾸준한 알고리즘 풀이 기록을 확인할 수 있습니다.</p>
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© 2026 임대연 · Built with HTML, CSS and Vanilla JavaScript · Last updated <time datetime="2026-06-28">2026.06.28</time></p>
-        <a href="#home">맨 위로 ↑</a>
       </div>
-    </footer>
+    </div>
+  </div>
+  <div class="sn">02</div>
+</div>
 
-    <div id="email-modal" class="email-modal" hidden role="dialog" aria-modal="true" aria-labelledby="email-modal-title">
-      <div class="email-modal-backdrop" data-email-close aria-hidden="true"></div>
-      <div class="email-modal-content">
-        <button type="button" class="email-modal-close" data-email-close aria-label="닫기">×</button>
-        <h2 id="email-modal-title">이메일 보내기</h2>
-        <p class="muted">원하시는 방법으로 메일을 보낼 수 있습니다.</p>
-        <div class="email-display">
-          <span class="email-address" data-email-address>eodos6480@gmail.com</span>
-          <button type="button" class="btn btn-sm" data-email-copy>복사</button>
+<!-- ═══ 3. PROJECTS OVERVIEW ═══ -->
+<div class="slide">
+  <div class="sb">
+    <div class="prog"><span>Profile</span><span class="on">Overview</span><span>엔테나</span><span>MoToK</span><span>안심식탁</span><span>SOOP</span><span>회고</span></div>
+    <div class="st">Projects <span class="a">Overview</span><span class="st-sub">최근 순 · 팀 규모와 내 역할을 먼저 밝힙니다</span></div>
+
+    <div class="pgrid">
+      <div class="pc">
+        <div class="pc-h">
+          <div class="pch-top"><span class="pch-label">PROJECT 1</span><span class="pch-badge">SSAFY 자율 PJT</span></div>
+          <div class="pch-title">엔테나 (Antenna)</div>
+          <div class="pch-meta"><span>2026.08.19 ~ 09.13 (4주)</span><span>·</span><span>6인 팀</span><span>·</span><span class="pch-role">백엔드 · 인프라 담당</span></div>
         </div>
-        <div class="email-options">
-          <a class="btn btn-primary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=eodos6480@gmail.com" target="_blank" rel="noreferrer">Gmail로 작성</a>
-          <a class="btn" href="https://outlook.live.com/mail/0/deeplink/compose?to=eodos6480@gmail.com" target="_blank" rel="noreferrer">Outlook으로 작성</a>
-          <a class="btn" href="mailto:eodos6480@gmail.com">기본 메일 앱</a>
+        <div class="pc-b">
+          <div class="ov-desc">예측을 <b>커밋·리빌</b>로 봉인해 블록체인에 기록하고, 누구나 검산할 수 있게 만든 AI 투자 예측 플랫폼</div>
+          <div class="bi"><b>시세 파이프라인 단독 소유(98.7%)</b> — 공공데이터 3년치 백필을 일 1만 콜 한도 안에서 성립시킴</div>
+          <div class="bi"><b>append-only DB 트리거</b> — 원장·체결·예측을 운영자조차 못 고치게 잠금</div>
+          <div class="bi"><b>인증 100% 단독</b> — Google·SSAFY OAuth 2.0 + JWT · Redis refresh 회전</div>
+          <div class="tags"><span class="tag on">Spring Boot 4</span><span class="tag">PostgreSQL 18</span><span class="tag">Redis 8</span><span class="tag">React 19</span><span class="tag">Docker</span><span class="tag">GitLab CI</span></div>
+        </div>
+      </div>
+
+      <div class="pc">
+        <div class="pc-h">
+          <div class="pch-top"><span class="pch-label">PROJECT 2</span><span class="pch-badge">SSAFY 공통 PJT</span></div>
+          <div class="pch-title">MoToK (MotionTok)</div>
+          <div class="pch-meta"><span>2026.07.15 ~ 08.25 (6주)</span><span>·</span><span>6인 팀</span><span>·</span><span class="pch-role">백엔드 — 인증 · 실시간 세션</span></div>
+        </div>
+        <div class="pc-b">
+          <div class="ov-desc">웹캠 모션 인식(MediaPipe)으로 최대 8명이 함께 즐기는 <b>실시간 멀티플레이</b> 미니게임 플랫폼</div>
+          <div class="bi"><b>세션 종료 경로 5개를 한 클래스로 통합</b> — REST·STOMP·SFU까지 한 번에 끊기</div>
+          <div class="bi"><b>Refresh 회전을 Redis Lua로 원자 실행</b> + sid 가드 — 동시 갱신이 정상 세션을 죽이던 문제 제거</div>
+          <div class="bi"><b>게임 정산 3중 진입을 SETNX 가드로 1회 실행 보장</b></div>
+          <div class="tags"><span class="tag on">Spring Boot 4</span><span class="tag">MySQL 8.4</span><span class="tag">Redis 7.4</span><span class="tag">STOMP</span><span class="tag">LiveKit SFU</span><span class="tag">Vue 3</span></div>
+        </div>
+      </div>
+
+      <div class="pc">
+        <div class="pc-h">
+          <div class="pch-top"><span class="pch-label">PROJECT 3</span><span class="pch-badge">팀장</span></div>
+          <div class="pch-title">안심식탁</div>
+          <div class="pch-meta"><span>2026.06.05 ~ 06.26 (3주)</span><span>·</span><span>2인 팀</span><span>·</span><span class="pch-role">팀장 · 백엔드 전반</span></div>
+        </div>
+        <div class="pc-b">
+          <div class="ov-desc">식약처 <b>22종 알러지</b> 기준으로 메뉴 안전도를 자동 판정하고, 재료 정보가 없는 메뉴는 생성형 AI가 보완하는 외식 플랫폼</div>
+          <div class="bi"><b>쿼드트리 공간 분할 시딩</b> — 카카오 로컬 API의 쿼리당 45건 한계를 재귀 4분할로 돌파</div>
+          <div class="bi"><b>Phantom Token</b> — 원본 JWT는 Redis에만, 클라이언트엔 SHA-256 해시만</div>
+          <div class="bi"><b>출처 3계층 분리</b> — AI 추정은 절대 '위험' 확정 근거가 되지 않게 설계</div>
+          <div class="tags"><span class="tag on">Spring Boot 3.3</span><span class="tag">Spring AI</span><span class="tag">MySQL 8</span><span class="tag">Redis</span><span class="tag">MyBatis</span><span class="tag">Vue 3</span></div>
+        </div>
+      </div>
+
+      <div class="pc">
+        <div class="pc-h">
+          <div class="pch-top"><span class="pch-label">PROJECT 4</span><span class="pch-badge">1인 개발 · 운영 중</span></div>
+          <div class="pch-title">SSAFY SOOP</div>
+          <div class="pch-meta"><span>2026.03.23 ~ 07.24</span><span>·</span><span>1인</span><span>·</span><span class="pch-role">기획 · 개발 · 배포 · 운영 전부</span></div>
+        </div>
+        <div class="pc-b">
+          <div class="ov-desc">Mattermost 계정으로 <b>교육생임만 증명</b>하고, 누가 썼는지는 서버 응답에조차 싣지 않는 익명 커뮤니티</div>
+          <div class="bi"><b>63커밋 100% 단독 · 실제 운영 중</b> — 16기 오픈, 졸업 기수 차단 마이그레이션까지 직접</div>
+          <div class="bi"><b>운영 장애 근본 원인 추적</b> — "타인 글 첫 조회에서만 500"의 진짜 원인을 찾아 제거</div>
+          <div class="bi"><b>테스트 32클래스 · @Test 181개</b> · Flyway V1~V17 스키마 버저닝</div>
+          <div class="tags"><span class="tag on">Spring Boot 3</span><span class="tag">MySQL</span><span class="tag">Redis</span><span class="tag">Flyway</span><span class="tag">React 18</span><span class="tag">GitHub Actions</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sn">03</div>
+</div>
+
+<!-- ═══ 4. 엔테나 ① 서비스 · 아키텍처 ═══ -->
+<div class="slide">
+  <div class="sb">
+    <div class="prog"><span>Profile</span><span>Overview</span><span class="on">엔테나</span><span>MoToK</span><span>안심식탁</span><span>SOOP</span><span>회고</span></div>
+    <div class="st">Project 1. <span class="a">엔테나</span> — 검산 가능한 AI 투자 예측 플랫폼<span class="st-sub">서비스 구조와 내 담당 영역</span></div>
+    <div class="meta">
+      <span><b>기간</b> 2026.08.19 ~ 09.13 (4주)</span>
+      <span><b>팀</b> 6인 — <span class="mine">백엔드 · 인프라 담당</span></span>
+      <span><b>기여</b> 작업 커밋 83건 / dev 브랜치 MR 머지 54건(팀 내 최다)</span>
+      <span><b>배포</b> stock-antenna.com</span>
+    </div>
+
+    <div class="row">
+      <div class="col f5">
+        <div class="c">
+          <div class="ch">서비스 — 예측을 봉인하고, 판정을 검산한다</div>
+          <div class="ct" style="margin-bottom:5px">주식 예측을 등록 시점에 <b>커밋 해시로 봉인</b>하고 매 영업일 머클루트 1건을 온체인에 앵커링해,
+            나중에 말을 바꾸는 것을 구조적으로 막는다. 회원은 판정 결과를 3단계로 직접 검산할 수 있다.</div>
+          <div class="bi"><b>AI 리서치</b> — 재무·공시·뉴스를 근거 카드로 제시, 그 근거를 골라 예측을 등록</div>
+          <div class="bi"><b>예측 커밋·리빌</b> — 대상·방향·목표가·기간은 <b>수정·삭제 API 자체가 없음</b></div>
+          <div class="bi"><b>모의투자</b> — 과거 일봉을 게임일 단위로 재생, 종료 시 AI 복기 리포트</div>
+        </div>
+        <div class="shot">
+          <div class="img-cap">종목 상세 — AI가 뽑은 긍정 요인 · 리스크 요인 · 확인할 점을 근거로 선택해 예측 등록</div>
+          <div class="img-wrap"><img src="assets/img/shots/ent-stock.jpg" alt="엔테나 종목 상세 화면"></div>
+        </div>
+      </div>
+
+      <div class="col f7">
+        <div class="c grow" style="padding:9px 11px">
+          <div class="ch">기술 아키텍처</div>
+          <div class="img-wrap" style="background:#0f1115;border-color:#0f1115"><img src="assets/img/diagrams/entena-arch.jpg" alt="엔테나 기술 아키텍처 다이어그램"></div>
+          <div class="role" style="margin-top:7px;flex-wrap:wrap;gap:5px">
+            <span class="role-tag me">내 담당</span>
+            <span class="role-desc">시세 수집 배치 · PostgreSQL 원장 · OAuth/JWT 인증 · 모의투자 시즌 엔진 · Docker/Nginx/GitLab CI</span>
+          </div>
+          <div class="role" style="flex-wrap:wrap;gap:5px">
+            <span class="role-tag">팀</span>
+            <span class="role-desc" style="font-weight:600;color:var(--text-dim)">스마트컨트랙트·체인 인덱서(김성령) · AI 리서치 본체(이상민) · 화면(4인 공동)</span>
+          </div>
+        </div>
+        <div class="kpis">
+          <div class="kpi"><div class="kv">98.7<small>%</small></div><div class="kl">market 도메인 코드 소유율</div></div>
+          <div class="kpi"><div class="kv">100<small>%</small></div><div class="kl">백엔드 auth 도메인 (8파일 605줄)</div></div>
+          <div class="kpi"><div class="kv">3<small>년치</small></div><div class="kl">일봉 백필 (2020-01-02~)</div></div>
+          <div class="kpi"><div class="kv">54<small>건</small></div><div class="kl">dev 브랜치 MR 머지 (팀 1위)</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sn">04</div>
+</div>
+
+<!-- ═══ 5. 엔테나 ② 문제 해결 ═══ -->
+<div class="slide">
+  <div class="sb">
+    <div class="prog"><span>Profile</span><span>Overview</span><span class="on">엔테나</span><span>MoToK</span><span>안심식탁</span><span>SOOP</span><span>회고</span></div>
+    <div class="st">Project 1. <span class="a">엔테나</span> — 문제 해결<span class="st-sub">외부 API 한도 · LLM 비용 · 데이터 신뢰성</span></div>
+
+    <div class="row" style="flex:1.45">
+      <div class="col f1">
+        <div class="c grow">
+          <div class="ch">① 백필이 영원히 끝나지 않던 문제</div>
+          <div class="wb why"><div class="bl">WHY</div><div class="bt">공공데이터포털 일 1만 콜 한도 안에서 3년치 일봉을 받아야 했다</div></div>
+          <div class="ct" style="margin:3px 0 5px">
+            <b>대안 검토:</b> ① 종목별 호출 — 하루 약 2,800콜, 3년 백필 물리적으로 불가
+            ② 날짜(<code class="k">basDt</code>) 단위 호출 <b>채택</b> — 한 번에 그날 전 종목
+          </div>
+          <div class="wb how"><div class="bl">HOW</div><div class="bt">"수집할 게 없는 날"과 "아직 안 받은 날"을 구분</div></div>
+          <div class="bi">응답을 DTO로 바인딩하지 않고 <b>JsonNode 트리로 파싱</b> — 포털이 ⓐ데이터 없는 날 <code class="k">items</code>를 빈 문자열로 ⓑ결과 1건이면 배열 대신 객체로 ⓒ키가 틀리면 HTTP 200에 XML 오류를 실어 보낸다</div>
+          <div class="bi">공휴일은 응답이 0건이라 "미수집"으로 남아 <b>매 회차 재호출</b>됐다 → 0건 응답도 <b>수집 완료로 기록</b>하도록 변경</div>
+          <div class="bi">일봉 적재는 PostgreSQL <code class="k">ON CONFLICT</code> upsert — 같은 날을 몇 번 돌려도 결과가 같다</div>
+          <div class="wb result"><div class="bl">AFTER</div><div class="bt">공휴일 약 50일 × 매 회차 재호출(시간당 600콜, 17시간이면 한도 소진) → 재호출 0건</div></div>
+        </div>
+      </div>
+
+      <div class="col f1">
+        <div class="c grow">
+          <div class="ch">② LLM 키 토큰 고갈 — AI 호출 구조 전면 개편</div>
+          <div class="wb why"><div class="bl">WHY</div><div class="bt">전 종목 일괄 배치가 팀 공용 LLM 키를 하루 만에 말려 서비스 전체가 멈췄다</div></div>
+          <div class="ct" style="margin:3px 0 5px">
+            <b>개편 전 실측:</b> 하루 약 <b>1,600콜 · 토큰 1.2M</b>
+            (뉴스 요약 ~900 + 종목 브리핑 301 + 투자 포인트 300)
+          </div>
+          <div class="wb how"><div class="bl">HOW</div><div class="bt">"모든 종목을 미리" → "열어본 종목만 그때"</div></div>
+          <div class="bi">투자 포인트를 <b>요청 시점 생성</b>으로 전환하고, 같은 종목 동시 요청은 <b>종목별 JVM 락</b>으로 1회만 태움</div>
+          <div class="bi"><code class="k">AiClient</code>에 401 즉시 중단 · 429 백오프 재시도 · OpenAI 호환 제공자 교체(<code class="k">AI_BASE_URL</code>) 추가</div>
+          <div class="bi">AI 출력 충실성 가드 — <code class="k">temperature 0</code> + 입력에 없는 숫자 차단</div>
+          <div class="wb result"><div class="bl">AFTER</div><div class="bt">하루 호출 = 시장 브리핑 1 + 실제로 연 종목 수 + 시즌 종료 수 (백엔드 574건 전부 통과)</div></div>
         </div>
       </div>
     </div>
 
-    <script src="assets/js/theme.js"></script>
-    <script src="assets/js/nav.js"></script>
-    <script src="assets/js/projects.js"></script>
-    <script src="assets/js/animations.js"></script>
-    <script src="assets/js/email-modal.js"></script>
-  </body>
+    <div class="row" style="flex:.72;margin-top:10px">
+      <div class="col f1">
+        <div class="c grow tint">
+          <div class="ch">③ 원장을 아무도 못 고치게 — append-only 트리거</div>
+          <div class="bi"><b>문제</b> — 온체인 앵커가 "외부 증명"이라면, DB에도 "내부 증명"이 필요했다. 권한 <code class="k">REVOKE</code>는 <b>테이블 소유자에게 걸리지 않아</b> 쓸 수 없었다(ddl-auto가 돌려면 앱 계정이 소유자여야 함)</div>
+          <div class="bi"><b>해결</b> — PostgreSQL <b>BEFORE 트리거</b>로 <code class="k">token_ledger</code>·<code class="k">season_trades</code>의 UPDATE/DELETE 전면 거부, <code class="k">predictions</code>는 판정 컬럼만 허용(대상·방향·목표가·기간·등록시각 불변), 리빌 전 <code class="k">salt</code>는 <code class="k">@JsonIgnore</code>로 직렬화 차단</div>
+          <div class="wb result"><div class="bl">RESULT</div><div class="bt">운영자·관리자·애플리케이션 버그까지 포함해 원장과 체결 기록을 고칠 수 있는 경로가 사라졌다</div></div>
+        </div>
+      </div>
+      <div class="col f1">
+        <div class="c grow tint">
+          <div class="ch">④ 로컬에선 재현되지 않던 신규 가입 100% 실패</div>
+          <div class="bi"><b>문제</b> — 2026-09-03, 신규 구글 가입이 전부 500. <code class="k">users.nickname</code>을 NULL 허용으로 바꿨지만
+            <b><code class="k">ddl-auto: update</code>는 기존 NOT NULL을 풀어 주지 않는다.</b> 그보다 먼저 만들어진 배포 DB에만 옛 제약이 남아 있었다</div>
+          <div class="bi"><b>왜 안 보였나</b> — 기존 회원 로그인은 INSERT를 타지 않아 멀쩡했고, <b>로컬은 테이블을 새로 만들기 때문에 재현 자체가 되지 않았다</b></div>
+          <div class="bi"><b>해결</b> — 매 부팅마다 도는 멱등 스크립트에 <code class="k">ALTER ... DROP NOT NULL</code>을 추가(이미 NULL 허용이면 no-op).
+            이 파일을 <b>"ddl-auto가 못 고치는 옛 스키마를 모아 두는 자리"</b>로 규정하고, Testcontainers로 NOT NULL을 다시 건 DB를 띄워 부팅 SQL이 실제로 푸는지 검증하는 테스트를 붙였다</div>
+          <div class="wb result"><div class="bl">AFTER</div><div class="bt">배포 DB가 부팅 시 스스로 복구 — 같은 유형의 스키마 드리프트를 한 곳에서 처리</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sn">05</div>
+</div>
+
+<!-- ═══ 6. MoToK ① 서비스 · 아키텍처 ═══ -->
+<div class="slide">
+  <div class="sb">
+    <div class="prog"><span>Profile</span><span>Overview</span><span>엔테나</span><span class="on">MoToK</span><span>안심식탁</span><span>SOOP</span><span>회고</span></div>
+    <div class="st">Project 2. <span class="a">MoToK</span> — 웹캠 모션 인식 실시간 파티게임<span class="st-sub">서비스 구조와 내 담당 영역</span></div>
+    <div class="meta">
+      <span><b>기간</b> 2026.07.15 ~ 08.25 (6주)</span>
+      <span><b>팀</b> 6인 — <span class="mine">백엔드 (인증 · 실시간 세션 · 게임 정산)</span></span>
+      <span><b>기여</b> 커밋 476 / 1,809 (26.3%) · 소스 +48,385 / -6,360</span>
+      <span><b>배포</b> motok.co.kr</span>
+    </div>
+
+    <div class="row">
+      <div class="col f5">
+        <div class="c">
+          <div class="ch">서비스 — 서버는 시간과 정산만, 인식은 브라우저가</div>
+          <div class="ct" style="margin-bottom:5px">최대 8명이 한 방에서 웹캠으로 몸을 움직여 겨루는 미니게임 5종.
+            모션 인식·점수 계산은 <b>브라우저 로컬 MediaPipe</b>가 하고, 서버는 <b>라운드 시각의 단일 권위 · 범위 클램프 · 정산 1회 실행 보장</b>만 맡는다.</div>
+          <div class="bi">8명분 영상을 서버가 추론하면 비용을 감당할 수 없고, 전부 클라이언트에 맡기면 <b>사람마다 라운드 종료 시점이 달라진다</b> → 하이브리드</div>
+          <div class="bi">미니게임 5종 — 별따라 손따라 · 캐치캐치 리듬 · 그대로 멈춰라 · 그림으로 말해요 · 모션 낚시</div>
+          <div class="bi">예외는 "그림으로 말해요" — 채점에 외부 AI 키가 필요해 <b>채점만 서버로 이관</b>(정답어는 서버 세션에만, 프롬프트 미포함 = 블라인드 채점)</div>
+        </div>
+        <div class="shot">
+          <div class="img-cap">대기실 — 배경 제거 아바타를 로컬 캔버스에서 합성해 송출 (서버는 영상 처리 없음)</div>
+          <div class="img-wrap"><img src="assets/img/shots/mtk-room.jpg" alt="MoToK 대기실 화면"></div>
+        </div>
+        <div class="shot">
+          <div class="img-cap">그대로 멈춰라 — 브라우저가 포즈 유사도를 계산하고, 서버는 라운드 시각과 정산만 소유</div>
+          <div class="img-wrap"><img src="assets/img/shots/mtk-play.jpg" alt="MoToK 게임 플레이 화면"></div>
+        </div>
+      </div>
+
+      <div class="col f7">
+        <div class="c grow" style="padding:9px 12px">
+          <div class="ch">아키텍처 — 제어 평면과 미디어 평면의 분리</div>
+          <div class="img-wrap" style="border:0;background:transparent">
+            <svg viewBox="0 0 620 330" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+              <defs>
+                <marker id="ar" viewBox="0 0 10 6" refX="9" refY="3" markerWidth="7" markerHeight="5" orient="auto"><path d="M0 0L10 3L0 6z" fill="#5A6472"/></marker>
+                <marker id="arA" viewBox="0 0 10 6" refX="9" refY="3" markerWidth="7" markerHeight="5" orient="auto"><path d="M0 0L10 3L0 6z" fill="#2563EB"/></marker>
+              </defs>
+              <!-- 브라우저 -->
+              <rect x="6" y="96" width="116" height="86" rx="6" fill="#fff" stroke="#0B2545" stroke-width="1.6"/>
+              <text x="64" y="118" font-size="12.5" font-weight="700" text-anchor="middle" fill="#10141A">브라우저</text>
+              <text x="64" y="136" font-size="10" text-anchor="middle" fill="#6B727D">Vue 3 · Pinia</text>
+              <text x="64" y="152" font-size="10" text-anchor="middle" fill="#6B727D">MediaPipe 로컬 추론</text>
+              <text x="64" y="170" font-size="10" text-anchor="middle" fill="#6B727D">점수 계산 · 캔버스 합성</text>
+
+              <!-- nginx 입구 -->
+              <rect x="150" y="28" width="54" height="250" rx="6" fill="#0B2545"/>
+              <text x="177" y="150" font-size="12" font-weight="700" text-anchor="middle" fill="#fff" transform="rotate(-90 177 150)">nginx · TLS 443</text>
+
+              <!-- app -->
+              <rect x="232" y="42" width="152" height="88" rx="6" fill="#fff" stroke="#0B2545" stroke-width="1.6"/>
+              <text x="308" y="64" font-size="12.5" font-weight="700" text-anchor="middle" fill="#10141A">Spring Boot 4</text>
+              <text x="308" y="82" font-size="10" text-anchor="middle" fill="#6B727D">REST 94 · STOMP 핸들러 23</text>
+              <text x="308" y="98" font-size="10" text-anchor="middle" fill="#6B727D">라운드 시각 권위 · 정산 가드</text>
+              <text x="308" y="116" font-size="10" text-anchor="middle" fill="#2563EB" font-weight="700">SessionTerminator</text>
+
+              <!-- stores -->
+              <rect x="232" y="166" width="72" height="58" rx="6" fill="#F6F7F9" stroke="#DCE0E6" stroke-width="1.4"/>
+              <text x="268" y="187" font-size="11" font-weight="700" text-anchor="middle" fill="#10141A">MySQL 8.4</text>
+              <text x="268" y="203" font-size="9" text-anchor="middle" fill="#6B727D">영속 · 19 엔티티</text>
+              <rect x="312" y="166" width="72" height="58" rx="6" fill="#F6F7F9" stroke="#DCE0E6" stroke-width="1.4"/>
+              <text x="348" y="187" font-size="11" font-weight="700" text-anchor="middle" fill="#10141A">Redis 7.4</text>
+              <text x="348" y="203" font-size="9" text-anchor="middle" fill="#6B727D">방 · 세션 · RT</text>
+              <text x="348" y="216" font-size="9" text-anchor="middle" fill="#B4802A">noeviction</text>
+
+              <!-- livekit -->
+              <rect x="432" y="42" width="152" height="88" rx="6" fill="#fff" stroke="#0B2545" stroke-width="1.6"/>
+              <text x="508" y="64" font-size="12.5" font-weight="700" text-anchor="middle" fill="#10141A">LiveKit SFU</text>
+              <text x="508" y="82" font-size="10" text-anchor="middle" fill="#6B727D">시그널링 7880</text>
+              <text x="508" y="98" font-size="10" text-anchor="middle" fill="#6B727D">미디어 UDP 50000–50100</text>
+              <text x="508" y="116" font-size="10" text-anchor="middle" fill="#2563EB" font-weight="700">twirp RemoveParticipant</text>
+
+              <!-- arrows -->
+              <path d="M122 122 L148 92" fill="none" stroke="#5A6472" stroke-width="1.6" marker-end="url(#ar)"/>
+              <text x="118" y="84" font-size="9" fill="#5A6472">REST / STOMP</text>
+              <path d="M204 86 L230 86" fill="none" stroke="#5A6472" stroke-width="1.6" marker-end="url(#ar)"/>
+              <path d="M204 120 L420 108 L430 100" fill="none" stroke="#5A6472" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+              <text x="300" y="140" font-size="9" fill="#5A6472">시그널링 프록시</text>
+              <path d="M290 130 L280 164" fill="none" stroke="#5A6472" stroke-width="1.4" marker-end="url(#ar)"/>
+              <path d="M330 130 L342 164" fill="none" stroke="#5A6472" stroke-width="1.4" marker-end="url(#ar)"/>
+
+              <!-- media plane -->
+              <rect x="6" y="250" width="578" height="56" rx="6" fill="#FBFCFD" stroke="#DCE0E6" stroke-width="1.3" stroke-dasharray="5 4"/>
+              <text x="18" y="268" font-size="10" font-weight="800" fill="#6B727D" font-family="JetBrains Mono, monospace">MEDIA PLANE</text>
+              <path d="M64 182 L64 276 L500 276 L500 134" fill="none" stroke="#2563EB" stroke-width="2.2" marker-end="url(#arA)"/>
+              <text x="200" y="294" font-size="10" font-weight="700" fill="#2563EB">미디어는 nginx를 거치지 않고 브라우저 ↔ SFU 직행 (UDP 차단망은 TCP 7881 폴백)</text>
+            </svg>
+          </div>
+          <div class="role" style="margin-top:4px;flex-wrap:wrap;gap:5px">
+            <span class="role-tag me">내 담당</span>
+            <span class="role-desc">인증 도메인 전체 · 세션 종료 통합 · Redis 게임세션 저장소와 정산 가드 · 유령 멤버 정리 · 그림으로 말해요 · 별따라 손따라 · 관리자 API</span>
+          </div>
+          <div class="role" style="flex-wrap:wrap;gap:5px">
+            <span class="role-tag">팀</span>
+            <span class="role-desc" style="font-weight:600;color:var(--text-dim)">LiveKit 도입·설정과 인프라(compose · CI · nginx 운영)는 팀원 담당</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sn">06</div>
+</div>
+
+<!-- ═══ 7. MoToK ② 문제 해결 ═══ -->
+<div class="slide">
+  <div class="sb">
+    <div class="prog"><span>Profile</span><span>Overview</span><span>엔테나</span><span class="on">MoToK</span><span>안심식탁</span><span>SOOP</span><span>회고</span></div>
+    <div class="st">Project 2. <span class="a">MoToK</span> — 문제 해결<span class="st-sub">세션 · 동시성 · 실시간 연결</span></div>
+
+    <div class="row" style="flex:1.4">
+      <div class="col f1">
+        <div class="c grow">
+          <div class="ch">① 로그아웃했는데 계속 온라인이던 계정</div>
+          <div class="wb why"><div class="bl">WHY</div><div class="bt">끊어야 할 연결이 <b>세 층</b>인데, 종료 처리가 5개 경로에 흩어져 있었다</div></div>
+          <div class="bi"><b>REST</b> — sid 폐기는 "다음 요청"을 막는 장치라 즉시 듣는다</div>
+          <div class="bi"><b>STOMP</b> — 인증이 CONNECT 때 <b>한 번뿐</b>이라 이미 열린 소켓엔 소급되지 않는다</div>
+          <div class="bi"><b>LiveKit</b> — 접속 토큰을 미디어 서버가 <b>자기 비밀로</b> 검증해 앱의 sid 폐기가 아예 닿지 않는다</div>
+          <div class="ct" style="margin:5px 0 3px"><b>증상:</b> 탈퇴한 계정이 하트비트로 접속 상태를 되살려 친구 목록에 온라인으로 남고, 개인 큐로 귓속말·초대를 계속 받고, 화상에 그대로 붙어 있었다.</div>
+          <div class="wb how"><div class="bl">HOW</div><div class="bt">순서를 아는 곳을 하나로 — <code class="k">SessionTerminator</code></div></div>
+          <div class="bi">로그아웃 · 밀어내기 · 탈퇴 · 비밀번호 변경 · 재설정 <b>5개 경로를 한 클래스로 통합</b></div>
+          <div class="bi">sid 폐기 → 프레즌스 제거 → 방 즉시 퇴장 → STOMP 세션 강제 종료 → <b>SFU <code class="k">RemoveParticipant</code> twirp 호출</b>(알림 프레임이 나갈 2초 유예 후 소켓 종료)</div>
+          <div class="bi">밀어내기 알림을 userId가 아닌 <b>대상 sid를 지목</b>해 발송 — 첫 로그인이 스스로를 튕기던 오판 제거</div>
+          <div class="wb result"><div class="bl">AFTER</div><div class="bt">방장 밀어내기 시 게임 시작 권한 공백 <b>17초 → 0초</b> · 새 정리 단계가 생겨도 고칠 곳은 한 곳</div></div>
+        </div>
+      </div>
+
+      <div class="col f1">
+        <div class="c grow">
+          <div class="ch">② 새 기기로 로그인했더니 잠시 뒤 로그아웃되던 문제</div>
+          <div class="wb why"><div class="bl">WHY</div><div class="bt">단일 세션 정책이라 새 로그인이 키를 덮어쓰는데, <b>밀려난 옛 기기의 갱신 스케줄러</b>가 뒤늦게 옛 토큰으로 갱신을 시도했다</div></div>
+          <div class="bi">해시만 비교하던 구현은 이를 <b>"모르는 토큰 = 유출"</b>로 판정해 재사용 탐지가 작동, <b>새 로그인 세션까지 DEL</b></div>
+          <div class="bi">탭을 여러 개 열어두는 게 기본인 웹 게임이라, <b>동시 갱신은 예외가 아니라 상시 상황</b>이었다</div>
+          <div class="wb how"><div class="bl">HOW</div><div class="bt">판정 기준을 바로잡고, 판정 전체를 원자 단위로</div></div>
+          <div class="bi"><b>sid 가드</b> — 저장된 sid ≠ 제시 토큰의 sid면 재사용 판정 없이 그냥 거절. "남의 세션 토큰은 유출 증거가 아니라 그저 남의 것"</div>
+          <div class="bi"><b>Redis Lua 한 덩어리</b>로 검사+회전을 원자 실행 — 나눠 실행하면 동시 요청 둘이 각자 회전해 서로의 토큰을 죽인다</div>
+          <div class="bi"><b>유예 창 30초</b> — 회전 직후 직전 토큰도 수리, 창을 넘긴 것만 진짜 유출로 판정</div>
+          <div class="bi">저장은 원문이 아닌 <b>SHA-256 해시</b> — Redis는 인증 없이 붙는 일이 잦아 덤프·MONITOR로 원문이 새면 그 자체가 남의 세션을 되살리는 자격증명이 된다 (고엔트로피 JWT라 느린 bcrypt는 불필요)</div>
+          <div class="wb result"><div class="bl">AFTER</div><div class="bt">밀려난 기기의 뒤늦은 갱신 → 새 세션 유지한 채 거절 · 다중 탭 동시 갱신 오탐 제거</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="flex:.8;margin-top:10px">
+      <div class="col f1">
+        <div class="c grow tint">
+          <div class="ch">③ 정산이 세 경로에서 동시에 들어오는 문제</div>
+          <div class="bi"><b>문제</b> — 타이머 만료 / 전원 제출 조기 정산 / 방장 강제종료가 동시에 정산을 부를 수 있었다. 세션 상태가 Redis에 있어 <b>DB 트랜잭션 경계가 닿지 않는다</b></div>
+          <div class="bi"><b>해결</b> — <code class="k">game:session:{roomId}</code> Hash(TTL 30m) / <code class="k">:scores</code> / <code class="k">:ended:{sessionId}</code> 3키 구조. <b>SETNX를 선점한 한쪽만</b> 정산 실행, 점수는 <code class="k">HSETNX</code>로 참가자당 최초 1회만 수리. 로테이션 게임은 <code class="k">roundIndex</code>를 키에 넣어 라운드별 가드</div>
+          <div class="wb result"><div class="bl">RESULT</div><div class="bt">중복 정산 · 중복 점수 제출 경로 제거 (재제출은 조용히 무시)</div></div>
+        </div>
+      </div>
+      <div class="col f1">
+        <div class="c grow tint">
+          <div class="ch">④ 통보 없이 사라진 사용자가 만든 빈 방</div>
+          <div class="bi"><b>문제</b> — 퇴장이 REST 단일 경로라 탭 강제 종료·브라우저 크래시·주소창 이탈 시 Redis members에 <b>유령 멤버</b>가 남고, 실제 0명인 방이 로비에 계속 쌓였다</div>
+          <div class="bi"><b>해결</b> — 새 하트비트 프로토콜을 만들지 않고, <b>서버가 이미 아는 신호를 재사용</b>했다. 게임룸 입장 시 항상 걸리는 <code class="k">/topic/rooms/{id}/chat</code> 구독을 재실 신호로 등록하고, DISCONNECT 후 유예 안에 재연결이 없으면 기존 <code class="k">leave</code>를 호출(멱등이라 REST 퇴장과 중복돼도 안전)</div>
+          <div class="wb result"><div class="bl">RESULT</div><div class="bt">방 삭제·방장 위임 기존 로직을 그대로 재사용 — 분기를 늘리지 않고 유령 멤버 제거</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sn">07</div>
+</div>
+
+<!-- ═══ 8. 안심식탁 ① 서비스 · 데이터 ═══ -->
+<div class="slide">
+  <div class="sb">
+    <div class="prog"><span>Profile</span><span>Overview</span><span>엔테나</span><span>MoToK</span><span class="on">안심식탁</span><span>SOOP</span><span>회고</span></div>
+    <div class="st">Project 3. <span class="a">안심식탁</span> — 알러지 안전도 판정 외식 플랫폼<span class="st-sub">서비스와 데이터 확보</span></div>
+    <div class="meta">
+      <span><b>기간</b> 2026.06.05 ~ 06.26 (3주)</span>
+      <span><b>팀</b> 2인 — <span class="mine">팀장 · 백엔드 전반</span> (프론트·배포 인프라는 팀원)</span>
+      <span><b>규모</b> REST 72개 · 테이블 33개 · MyBatis 매퍼 15개</span>
+    </div>
+
+    <div class="row">
+      <div class="col f6">
+        <div class="c">
+          <div class="ch">문제 — "이 메뉴 먹어도 되나?"가 매 끼니 반복된다</div>
+          <div class="ct">프랜차이즈는 공식 알러지표가 있지만 <b>개인 식당·신규 메뉴는 정보가 거의 없다.</b>
+            내 알러지·기피 프로필을 등록해 두면 메뉴마다 <b>안전 / 주의 / 위험</b>을 자동 판정하고,
+            정보가 없는 메뉴는 생성형 AI가 보완하되 <b>확정으로 승격하지 않는다.</b></div>
+        </div>
+        <div class="shot">
+          <div class="img-cap">지도 — 내 알러지 프로필 기준으로 주변 식당을 안전도 색상으로 표시</div>
+          <div class="img-wrap"><img src="assets/img/shots/ans-map.jpg" alt="안심식탁 지도 화면"></div>
+        </div>
+        <div class="shot">
+          <div class="img-cap">메뉴 상세 — 식약처 22종 기준 유발 재료를 출처와 함께 표시</div>
+          <div class="img-wrap"><img src="assets/img/shots/ans-menu.jpg" alt="안심식탁 메뉴 상세 화면"></div>
+        </div>
+      </div>
+
+      <div class="col f6">
+        <div class="c grow">
+          <div class="ch">보여줄 데이터가 없으면 서비스가 성립하지 않는다</div>
+          <div class="wb why"><div class="bl">WHY</div><div class="bt">카카오 로컬 키워드 검색은 <b>rect 하나당 최대 45건</b>(size 15 × page 3)만 회수된다</div></div>
+          <div class="ct" style="margin:3px 0 5px">브랜드명으로 한 번 긁으면 전국 지점이 45건에서 잘린다.
+            <b>페이지네이션이 아니라 공간 분할이 답인 이유가 API 제약 자체에 있었다.</b></div>
+          <div class="wb how"><div class="bl">HOW</div><div class="bt">전국 바운딩박스 → 쿼드트리 재귀 4분할</div></div>
+          <div class="bi">대한민국 전역(<code class="k">lng 124.5~132.0 / lat 33.0~38.7</code>)에서 시작해
+            <code class="k">meta.total_count &gt; 45</code>이면 중점 기준 <b>4사분면으로 재귀 분할</b>(MAX_DEPTH 12)</div>
+          <div class="bi">45건 이하로 내려간 타일에서만 page 1~3 순회 · 타일 경계 중복은 <b>카카오 place id 기준 dedupe</b></div>
+          <div class="bi">수집 후 <code class="k">category_group_code</code> 필터 + 브랜드 판별로 동명 오탐 차단, <code class="k">insertIgnore</code>로 중복 방지</div>
+          <div class="wb how"><div class="bl">HOW</div><div class="bt">콜드스타트 — 기동 시 멱등 시딩</div></div>
+          <div class="bi"><code class="k">SeedRunner(ApplicationRunner)</code>가 <b>데몬 백그라운드 스레드</b>로 시딩을 돌려 서버 기동을 막지 않음</div>
+          <div class="bi"><code class="k">brand_seed</code> 플래그로 완료 브랜드는 skip → <b>재기동해도 무해</b>, 브랜드 단위 try/catch로 실패 격리 후 다음 기동에 재시도</div>
+          <div class="wb result"><div class="bl">RESULT</div><div class="bt">첫 사용자에게 보여줄 공식 데이터 확보 — 프랜차이즈 메뉴 × 알러지 22종 매트릭스 <b>565행을 직접 수집·정제</b></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sn">08</div>
+</div>
+
+<!-- ═══ 9. 안심식탁 ② 인증 · AI 설계 ═══ -->
+<div class="slide">
+  <div class="sb">
+    <div class="prog"><span>Profile</span><span>Overview</span><span>엔테나</span><span>MoToK</span><span class="on">안심식탁</span><span>SOOP</span><span>회고</span></div>
+    <div class="st">Project 3. <span class="a">안심식탁</span> — 인증 설계와 AI 사용 원칙<span class="st-sub">JWT를 즉시 철회하기 · AI를 어디까지 믿을 것인가</span></div>
+
+    <div class="row">
+      <div class="col f1">
+        <div class="c grow">
+          <div class="ch">① 세션 → JWT 전환의 대가: 즉시 무효화 불가</div>
+          <div class="wb why"><div class="bl">WHY</div><div class="bt">SPA 분리로 JWT를 도입했더니 <b>탈취 시 만료까지 강제 로그아웃이 불가능</b>했다</div></div>
+          <div class="wb how"><div class="bl">HOW</div><div class="bt">Phantom Token — 원본은 서버에, 클라이언트엔 해시만</div></div>
+          <div class="bi">원본 JWT를 Redis <code class="k">auth:access:&lt;sha256&gt;</code> / <code class="k">auth:refresh:&lt;sha256&gt;</code>에 보관, 클라이언트는 <b>64자 해시만</b> 보유 (access는 응답 바디, refresh는 HttpOnly 쿠키 <code class="k">Path=/api/v1/auth</code>)</div>
+          <div class="bi">요청 시 <code class="k">[0-9a-f]{64}</code> 정규식으로 <b>Redis 조회 전에</b> 형식 불일치를 거름 → 원본 조회 → 서명·만료·<code class="k">typ</code> 검증(refresh를 access로 쓰는 교차 사용 차단)</div>
+          <div class="bi">Redis 키 TTL = 토큰 만료 → <b>만료 관리 코드가 따로 필요 없다</b>. 키 삭제 = 즉시 강제 로그아웃</div>
+          <div class="bi">Redis를 <b>무영속</b>(<code class="k">--save '' --appendonly no</code>)으로 둔 것도 의도 — 재시작 = 전원 강제 로그아웃을 보안 동작으로 규정</div>
+          <div class="wb result"><div class="bl">AFTER</div><div class="bt">클라이언트가 클레임·서명을 볼 수 없고, 서버는 키 삭제 한 번으로 세션을 끊는다</div></div>
+          <div class="ct" style="margin-top:4px;color:var(--warn)"><b>남은 한계 —</b> HTTP 배포 구간이라 refresh 쿠키 <code class="k">secure=false</code>, CORS <code class="k">allowedHeaders=*</code>. HTTPS 전환과 헤더 화이트리스트가 다음 과제였다.</div>
+        </div>
+      </div>
+
+      <div class="col f1">
+        <div class="c">
+          <div class="ch">② AI 추정은 경고를 확정하지 않는다</div>
+          <div class="ct" style="margin-bottom:4px">알러지 서비스에서 <b>틀린 "안전"은 사고</b>, <b>남발된 "위험"은 무용지물</b>이다. 그래서 판정 근거를 출처별로 3계층으로 분리했다.</div>
+          <div class="img-wrap" style="border:0;background:transparent;flex:0 0 128px">
+            <svg viewBox="0 0 560 130" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+              <rect x="4" y="8" width="168" height="52" rx="6" fill="#E8F4EC" stroke="#1F7A4D" stroke-width="1.6"/>
+              <text x="88" y="30" font-size="12" font-weight="800" text-anchor="middle" fill="#12603A">OFFICIAL</text>
+              <text x="88" y="48" font-size="10" text-anchor="middle" fill="#2A6B4C">프랜차이즈 공식 · 식약처</text>
+              <rect x="188" y="8" width="168" height="52" rx="6" fill="#FBF3E2" stroke="#B4802A" stroke-width="1.6"/>
+              <text x="272" y="30" font-size="12" font-weight="800" text-anchor="middle" fill="#8A6118">USER_CONTRIBUTED</text>
+              <text x="272" y="48" font-size="10" text-anchor="middle" fill="#8A6118">사용자 보강 · 합의 60% 이상</text>
+              <rect x="372" y="8" width="184" height="52" rx="6" fill="#F2F3F5" stroke="#9AA3AE" stroke-width="1.6" stroke-dasharray="5 4"/>
+              <text x="464" y="30" font-size="12" font-weight="800" text-anchor="middle" fill="#5A6472">AI_ESTIMATED</text>
+              <text x="464" y="48" font-size="10" text-anchor="middle" fill="#6B727D">AI 추정 — 불확실로 분리 표기</text>
+              <path d="M88 62 L88 84 L240 84" fill="none" stroke="#1F7A4D" stroke-width="1.8"/>
+              <path d="M272 62 L272 84" fill="none" stroke="#B4802A" stroke-width="1.8"/>
+              <path d="M464 62 L464 104 L352 104" fill="none" stroke="#9AA3AE" stroke-width="1.6" stroke-dasharray="4 3"/>
+              <rect x="240" y="70" width="112" height="28" rx="14" fill="#0B2545"/>
+              <text x="296" y="88" font-size="11.5" font-weight="800" text-anchor="middle" fill="#fff">위험 확정 가능</text>
+              <text x="358" y="108" font-size="10" font-weight="700" fill="#5A6472">확정 승격 불가</text>
+            </svg>
+          </div>
+          <div class="bi"><b>AI 추정 결과는 절대 "위험" 확정 근거가 되지 않는다</b> — <code class="k">AI_ESTIMATED</code> 출처로만 흡수되고, 사용자 합의 신뢰도 <code class="k">60%</code> 이상일 때만 위험이 확정된다</div>
+          <div class="bi">재료 추정은 <b>여러 메뉴를 1회 호출로 배치</b>, likelihood 1~100, 메뉴당 최대 8개, <b>후보 목록 밖 재료 생성 금지</b></div>
+        </div>
+        <div class="c grow">
+          <div class="ch">③ 링크 한 줄로 식당 등록 — 전부 AI도, 전부 파서도 아니다</div>
+          <div class="bi"><b>네이버 → LLM</b> · <code class="k">window.__APOLLO_STATE__</code> 블롭은 거대하고 스키마가 자주 바뀌어 결정적 파서가 계속 깨진다 → Spring AI <code class="k">BeanOutputConverter</code>로 record 강제 파싱. 노이즈 필드 <b>21종을 재귀 제거</b>하고 80,000자로 트림해 토큰 절감</div>
+          <div class="bi"><b>카카오 → 코드 파싱</b> · panel3는 구조가 안정적이라 LLM 비용·비결정성을 감수할 이유가 없다</div>
+          <div class="bi">응답에 charset이 없어 한글이 깨지던 문제는 <b>바이트 수신 후 UTF-8 명시 디코딩</b>으로, 간헐 429는 UA 위장 + <b>3회 백오프</b> + 엔드포인트 폴백으로 처리</div>
+          <div class="shot" style="margin-top:5px">
+            <div class="img-cap">신규 음식점 등록 — 지도 링크 한 줄이면 주소·메뉴·가격이 자동으로 채워진다</div>
+            <div class="img-wrap"><img src="assets/img/shots/ans-register.jpg" alt="안심식탁 신규 음식점 등록 모달"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sn">09</div>
+</div>
+
+<!-- ═══ 10. SSAFY SOOP ═══ -->
+<div class="slide">
+  <div class="sb">
+    <div class="prog"><span>Profile</span><span>Overview</span><span>엔테나</span><span>MoToK</span><span>안심식탁</span><span class="on">SOOP</span><span>회고</span></div>
+    <div class="st">Project 4. <span class="a">SSAFY SOOP</span> — 1인 기획·개발·배포·운영<span class="st-sub">익명성을 아키텍처로 보장하고, 운영 장애를 직접 추적했다</span></div>
+    <div class="meta">
+      <span><b>기간</b> 2026.03.23 ~ 07.24</span>
+      <span><b>팀</b> <span class="mine">1인 — 커밋 63건 100% 단독</span></span>
+      <span><b>규모</b> REST 39 · 엔티티 14 · 테스트 32클래스 / @Test 181 · Flyway V1~V17</span>
+      <span><b>운영</b> ssafy-soop.site · 16기 오픈 · 졸업 기수 차단 마이그레이션</span>
+    </div>
+
+    <div class="row" style="flex:1.25">
+      <div class="col f1">
+        <div class="c grow">
+          <div class="ch">익명성을 "지키는 것"이 아니라 "가질 수 없게" 만들기</div>
+          <div class="img-wrap" style="border:0;background:transparent;flex:0 0 118px">
+            <svg viewBox="0 0 560 120" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+              <defs><marker id="s1" viewBox="0 0 10 6" refX="9" refY="3" markerWidth="7" markerHeight="5" orient="auto"><path d="M0 0L10 3L0 6z" fill="#5A6472"/></marker></defs>
+              <rect x="2" y="34" width="104" height="48" rx="6" fill="#fff" stroke="#0B2545" stroke-width="1.5"/>
+              <text x="54" y="55" font-size="11.5" font-weight="700" text-anchor="middle" fill="#10141A">Mattermost</text>
+              <text x="54" y="71" font-size="9.5" text-anchor="middle" fill="#6B727D">교육생 여부만 확인</text>
+              <path d="M106 58 L150 58" stroke="#5A6472" stroke-width="1.6" marker-end="url(#s1)" fill="none"/>
+              <text x="128" y="50" font-size="9" text-anchor="middle" fill="#5A6472">프록시</text>
+              <rect x="152" y="20" width="150" height="76" rx="6" fill="#E8EFFC" stroke="#2563EB" stroke-width="1.6"/>
+              <text x="227" y="42" font-size="11.5" font-weight="800" text-anchor="middle" fill="#123A82">SOOP 서버</text>
+              <text x="227" y="59" font-size="9.5" text-anchor="middle" fill="#123A82">mmUserId만 저장</text>
+              <text x="227" y="74" font-size="9.5" text-anchor="middle" fill="#123A82">MM 토큰 즉시 폐기</text>
+              <text x="227" y="89" font-size="9.5" font-weight="700" text-anchor="middle" fill="#B4802A">password 컬럼 없음</text>
+              <path d="M302 58 L346 58" stroke="#5A6472" stroke-width="1.6" marker-end="url(#s1)" fill="none"/>
+              <text x="324" y="50" font-size="9" text-anchor="middle" fill="#5A6472">자체 JWT</text>
+              <rect x="348" y="20" width="208" height="76" rx="6" fill="#fff" stroke="#0B2545" stroke-width="1.5"/>
+              <text x="452" y="42" font-size="11.5" font-weight="700" text-anchor="middle" fill="#10141A">API 응답 익명화 계층</text>
+              <text x="452" y="60" font-size="9.5" text-anchor="middle" fill="#6B727D">실신원(mmUserId·email) 제외</text>
+              <text x="452" y="76" font-size="9.5" text-anchor="middle" fill="#6B727D">닉네임·기수·캠퍼스 3필드만</text>
+              <text x="452" y="91" font-size="9.5" text-anchor="middle" fill="#6B727D">댓글은 글 단위 별칭(글쓴이/익명N)</text>
+            </svg>
+          </div>
+          <div class="bi"><b>자체 가입을 열면 "교육생 여부"를 증명할 방법이 없다</b> → 이미 전원이 쓰는 MM 계정을 <b>신원 증명 수단으로만</b> 빌린다. 덕분에 비밀번호를 저장하는 테이블 자체가 존재하지 않는다</div>
+          <div class="bi">MM 호출에 connect 3s / read 5s 타임아웃 — 4xx는 401, 타임아웃·5xx는 503으로 <b>"인증 실패"와 "외부 장애"를 구분</b></div>
+          <div class="bi">관리자 경로는 Role 인가 위에 <b>15분 TTL step-up</b> 마커를 한 겹 더. 해시 미설정이면 <b>fail-closed</b>로 전면 차단, 기동 시 BCrypt 형식 정규식으로 오설정을 잡는다</div>
+        </div>
+      </div>
+
+      <div class="col f1">
+        <div class="c grow">
+          <div class="ch">운영 장애 — "타인 글 첫 조회에서만 500"</div>
+          <div class="wb why"><div class="bl">증상</div><div class="bt">"16기 글만 안 보인다"로 제보됐다. 기수 필터 문제로 오인하기 딱 좋은 모양이었다</div></div>
+          <div class="bi"><b>진짜 원인</b> — 직전 릴리스에서 6개 <code class="k">insertIgnore</code>에 일괄로 붙인 <code class="k">@Modifying(clearAutomatically=true)</code>가 INSERT 직후 영속성 컨텍스트를 비우면서, 이미 로드된 <code class="k">Post</code>가 detach되고 author LAZY 프록시 초기화가 <code class="k">LazyInitializationException</code>으로 터졌다</div>
+          <div class="bi"><b>왜 일부만?</b> 본인 글·24h 내 재조회·touch 갱신은 INSERT를 타지 않아 멀쩡했다. 실패한 건 <b>"첫 조회자"</b>뿐이고, 신규 글은 전원이 첫 조회자라 전원 실패로 보였다</div>
+          <div class="bi"><b>부수 피해</b> — 같은 원인으로 신고 누적 자동 숨김이 detach된 엔티티에 걸려 <b>조용히 유실</b>되고 있었다</div>
+          <div class="wb how"><div class="bl">HOW</div><div class="bt">호출부에 사전 존재 확인 가드가 있어 clear로 얻는 게 없다 → 6개 전부 제거</div></div>
+          <div class="bi">각 <code class="k">insertIgnore</code>에 <b>"켜지 말 것" 재발 방지 주석</b>을 달고, <code class="k">GlobalExceptionHandler</code>가 500/503에 스택트레이스를 남기도록 고쳤다 — <b>이 장애는 어느 로그에도 흔적이 없었다</b></div>
+          <div class="bi">검증은 Mockito가 아니라 <b>H2를 MySQL 모드로 띄워</b> 실세션으로 회귀 테스트</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="flex:.72;margin-top:10px">
+      <div class="col f1">
+        <div class="c grow tint">
+          <div class="ch">catch로 못 막는 500 — 예외를 "잡는" 대신 "생기지 않게"</div>
+          <div class="bi"><b>문제</b> — 좋아요 더블클릭·두 탭 동시 조회에서 500. IDENTITY 전략이라 <code class="k">save()</code>가 즉시 INSERT를 날리고, 유니크 위반 시 Hibernate가 트랜잭션을 <b>rollback-only로 마킹</b>한다. 예외를 catch로 삼켜도 커밋 시점에 <code class="k">UnexpectedRollbackException</code>이 터진다</div>
+          <div class="bi"><b>해결</b> — 6개 경로를 네이티브 <code class="k">INSERT IGNORE</code>로 전환해 중복이 예외가 아니라 <b>0행 반환</b>이 되게 했다. 다만 FK·NOT NULL 위반까지 경고로 강등되는 위험이 있어 사전 존재 확인 가드를 남기고 <b>"가드를 제거하면 무증상 데이터 유실"</b> 경고 주석을 붙였다</div>
+        </div>
+      </div>
+      <div class="col f1">
+        <div class="c grow tint">
+          <div class="ch">토큰 회전 · 운영 품질</div>
+          <div class="bi"><b>RFC 9700 유예 창</b> — 회전을 "구 RT 삭제 → tombstone → 신 RT 등록 → 유예 마커"까지 <b>Lua 하나로 원자 실행</b>. 유예(20s) 안의 재제시는 다중 탭 경합으로 보고 직전 RT를 재발급, 창 밖만 탈취로 판정해 전 세션 폐기</div>
+          <div class="bi"><b>Flyway V1~V17</b> · prod는 <code class="k">flyway.enabled</code> + <code class="k">ddl-auto: validate</code> 이중 검증. V12에서 <code class="k">refresh_tokens</code> 테이블을 폐기하며 정리 스케줄러 31줄이 통째로 사라졌다(Redis TTL로 자연 만료)</div>
+          <div class="bi"><b>스스로 아는 부채</b> — 레이트리밋은 <code class="k">ConcurrentHashMap</code> 인메모리라 단일 인스턴스 전제. Redis를 이미 쓰는데도 남겨둔 지점이라, 수평 확장 시 <code class="k">INCR + EXPIRE</code>로 교체해야 함을 주석에 명시해 두었다</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sn">10</div>
+</div>
+
+<!-- ═══ 11. 회고 ═══ -->
+<div class="slide">
+  <div class="sb">
+    <div class="prog"><span>Profile</span><span>Overview</span><span>엔테나</span><span>MoToK</span><span>안심식탁</span><span>SOOP</span><span class="on">회고</span></div>
+    <div class="st">회고 — <span class="a">못한 것 · 한계 · 배운 것</span><span class="st-sub">아쉬운 지점을 알고 있다는 것이 다음 설계의 출발점입니다</span></div>
+
+    <div class="row" style="flex:1.1">
+      <div class="col f1">
+        <div class="c grow">
+          <div class="ch">하려고 했는데 못한 것</div>
+          <div class="bi"><b>게임 세션 복구 (MoToK)</b> — 끊긴 참가자가 <code class="k">GAME_START</code>를 못 받는 문제를 <b>0~3층으로 분해</b>해 명세 개정 초안을 썼지만, 팀 합의 전에는 서버 구현에 들어가지 않기로 해 <b>0층(끊김 노출·강제 재접속·발행 실패 안내)까지만</b> 구현했다.
+            1층 구독자 기반 roster 확정, 2층 세션 스냅샷 복구, 3층 <code class="k">ack</code>로 반열림 소켓 탐지가 남았다.</div>
+          <div class="bi"><b>미사용 코드 정리 (MoToK)</b> — BE 매핑 62개와 FE 호출 경로를 대조하고 Spring 빈 · enum JSON 값 · 동적 문자열 참조 3가지 오탐을 손으로 걸러 <b>조사 문서까지 냈지만</b>, 공용 코드라 팀 합의를 기다리며 한 줄도 지우지 않았다.</div>
+          <div class="bi"><b>부하 테스트 (MoToK · 엔테나)</b> — actuator · Prometheus · node-exporter까지 붙여 놓고 <b>실측까지 가지 못했다.</b>
+            운영 compose에서 SFU·nginx의 <code class="k">mem_limit</code>을 비워 둔 것도 "실측 없이 조이면 베타 도중 영상만 끊긴다"는 판단이었고, 결국 숫자를 채우지 못한 채 끝났다.</div>
+          <div class="bi"><b>운영 백로그 (SOOP)</b> — 모더레이션 강화와 북마크 폴더를 WORKLOG §6 백로그에 적어 둔 채로 마무리했다. 혼자 만드는 서비스라 <b>"무엇을 안 할지"를 정하는 것</b>이 매번 가장 어려운 판단이었다.</div>
+          <div class="bi"><b>걷어낸 기능 (안심식탁)</b> — 팀이 넣어 둔 관리자용 Spring Batch 일별 통계가 실제 운영 판단에 쓰이지 않는다는 걸 확인하고, <b>폐기와 대체(활동 로그)를 내가 주도</b>했다. 남겨두면 유지비만 드는 코드였다.</div>
+          <div class="bi"><b>테스트 스위트 개선 (엔테나 · 미반영)</b> — 전체 테스트가 <code class="k">OutOfMemoryError</code>로 깨지던 문제를 힙 증설 대신 <b>컨텍스트 캐시 32→8 + <code class="k">ddl-auto: create</code></b>로 잡아
+            개인 브랜치에서 <b>9건 실패·6분 → 714건 통과·55초</b>까지 실측했지만, <b>dev에 반영하지 못한 채 끝났다.</b></div>
+          <div class="bi"><b>화면 설계 (엔테나)</b> — 프론트엔드는 4명이 나눠 쓰는 공용 영역이라, 내 몫은 <b>내가 만든 API를 화면에 붙이는 연결 작업</b>이 중심이었다. 설계까지 끌고 가 보고 싶었지만 분업상 양보한 부분이다.</div>
+          <div class="bi"><b>미디어 서버 (MoToK)</b> — LiveKit 도입·튜닝은 팀원 담당이라, 내가 만진 지점은 세션 종료 시 <code class="k">RemoveParticipant</code> 한 곳뿐이다. SFU를 직접 운영해 보는 경험은 다음으로 미뤘다.</div>
+        </div>
+      </div>
+
+      <div class="col f1">
+        <div class="c grow">
+          <div class="ch">기술적 한계와 개선 방안</div>
+          <div class="bi"><b>단일 인스턴스 전제 (MoToK)</b> — STOMP simple broker와 인메모리 스케줄·레지스트리를 쓰는 한 스케일아웃이 불가능하다. 서버 재시작 시 진행 중 게임의 종료 스케줄도 유실된다(현재는 "새 게임 시작 시 덮어써 복구"라는 임시 대응).
+            <b>→ 외부 브로커(RabbitMQ/Redis Pub-Sub) + 분산 락(ShedLock)</b>으로 옮기는 것이 다음 단계다.</div>
+          <div class="bi"><b>레이트리밋이 인메모리 (SOOP)</b> — 이미 Redis를 쓰고 있으면서 로그인 제한만 <code class="k">ConcurrentHashMap</code>으로 남겨 뒀다. <b>→ <code class="k">INCR + EXPIRE</code> 카운터</b>로 교체하면 그대로 수평 확장 가능.</div>
+          <div class="bi"><b>테스트 공백</b> — 안심식탁은 테스트가 0건이고(최종보고서에 한계로 명시), SOOP은 컨트롤러 슬라이스(<code class="k">@WebMvcTest</code>)가 비어 있다. 네 프로젝트 모두 <b>커버리지 측정 도구(JaCoCo)를 붙이지 않아 수치로 말할 수 없다.</b>
+            <b>→ 다음 프로젝트는 JaCoCo와 커버리지 게이트를 CI 1일차에 넣는다.</b></div>
+          <div class="bi"><b>배치와 API가 한 프로세스 (엔테나)</b> — <code class="k">@Scheduled</code> 기본 스레드 풀은 1개인데 풀 크기를 따로 두지 않아 <b>모든 배치가 한 스레드를 나눠 쓰고 있었다.</b>
+            40분짜리 AI 판정 배치를 켜면 5초 주기 체인 인덱서가 멈추는 구조라, <b>켜기 전에</b> 전용 데몬 스레드로 분리해 막았다.
+            <b>→ 애초에 배치 워커를 별도 프로세스로 분리</b>하는 것이 맞는 구조였다.</div>
+          <div class="bi"><b>테스트 0건 (안심식탁)</b> — 3주라는 기간을 이유로 테스트를 건너뛰고 검증을 Swagger 수동 테스트에 의존했다. 최종보고서에 한계로 명시해 뒀지만,
+            <b>기간이 짧을수록 오히려 회귀 비용이 크다</b>는 걸 이후 프로젝트에서 체감했다.</div>
+          <div class="bi"><b>HTTPS 미완 (안심식탁)</b> — refresh 쿠키 <code class="k">secure=false</code>, CORS <code class="k">allowedHeaders=*</code>. 팬텀 토큰으로 얻은 이득을 전송 구간에서 깎아먹는 구성이었다.</div>
+        </div>
+      </div>
+
+      <div class="col f1">
+        <div class="c grow">
+          <div class="ch">새로 배운 것 · 팀에 남긴 것</div>
+          <div class="role"><span class="role-tag me">학습</span><span class="role-desc">무상태를 포기하는 대가로 무엇을 얻는가</span></div>
+          <div class="bi">팬텀 토큰 · RFC 9700 유예 창 · Redis Lua 원자 실행 · SETNX 멱등 가드 · PostgreSQL 트리거 append-only —
+            <b>"동시에 들어오면 어떻게 되는가"를 먼저 묻는 습관</b>이 생겼다.</div>
+          <div class="role"><span class="role-tag me">학습</span><span class="role-desc">제약을 먼저 재고 설계한다</span></div>
+          <div class="bi">일 1만 콜 한도, 쿼리당 45건, LLM 토큰 예산, 8명분 영상 추론 비용 — <b>외부 제약이 아키텍처를 결정한 경험</b>이 네 번 반복됐다.</div>
+          <div class="role"><span class="role-tag">협업</span><span class="role-desc">숫자와 문서로 남기기</span></div>
+          <div class="bi"><b>dev 브랜치 MR 머지 54건 (팀 내 최다)</b> — 엔테나에서 릴리스 통합을 맡았다.</div>
+          <div class="bi">개선은 커밋 본문에 <b>실측표로</b> 남겼다 — 테스트 6분→55초, AI 호출 1,600콜/일→온디맨드. 나중에 근거를 다시 찾을 필요가 없었다.</div>
+          <div class="bi">BE→FE 인계 문서(회원가입), 명세 개정 초안, 미사용 코드 조사 문서를 남겨 <b>다음 사람이 이어받을 수 있게</b> 했다.</div>
+          <div class="bi"><b>SSAFY Spring 스터디 공동 리더</b> — 약 20명에게 "명세서 → 직접 구현 → 강의로 검증" 사이클을 설계하고 강의 5편을 제작했다.</div>
+          <div class="role"><span class="role-tag">기록</span><span class="role-desc">말하려면 근거가 남아 있어야 한다</span></div>
+          <div class="role"><span class="role-tag me">학습</span><span class="role-desc">"뻔한 이유"로 기술을 고르지 않기</span></div>
+          <div class="bi">시세 수집에 <code class="k">RestClient</code>를 쓴 이유는 "가볍다"가 아니라,
+            <b>수집이 스케줄러 스레드에서 도는 블로킹 배치라 논블로킹으로 얻을 게 없고, 포털 페이징이 <code class="k">totalCount</code>를 받아야 다음 장을 알 수 있어 어차피 순차</b>이기 때문이었다.
+            선택의 근거를 그 프로젝트 안에서 찾는 습관이 생겼다.</div>
+          <div class="bi">이 포트폴리오에 쓴 수치는 <b>전부 코드와 커밋에서 다시 확인한 것</b>이다. 근거가 없는 항목은 "측정하지 못했다"라고 적었다 —
+            면접에서 "이거 어디 코드예요?"에 파일 경로로 답할 수 있는 상태를 목표로 삼았다.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sn">11</div>
+</div>
+
+<!-- ═══ 12. CLOSING ═══ -->
+<div class="slide cover">
+  <div class="cover-bg"></div>
+  <div class="cover-inner">
+    <div><div class="cv-label">THANK YOU</div></div>
+    <div>
+      <div class="cv-name" style="font-size:46px">읽어 주셔서 감사합니다.</div>
+      <div class="cv-rule"></div>
+      <div class="cv-tag">
+        네 번의 프로젝트에서 <b>인증 · 정합성 · 데이터 파이프라인</b>을 맡으며,<br>
+        "지금 동작한다"와 "동시에 들어와도 동작한다"가 다른 문제라는 것을 배웠습니다.<br>
+        다음에는 <b>측정까지</b> 해내는 개발자가 되겠습니다.
+      </div>
+      <div style="margin-top:26px;font-size:13px;line-height:2;opacity:.85;font-family:var(--mono)">
+        Portfolio &nbsp;https://rilac.github.io/Portfolio/<br>
+        GitHub &nbsp;&nbsp;&nbsp;&nbsp;https://github.com/rilac<br>
+        Blog &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://velog.io/@asd990702/posts<br>
+        Algorithm&nbsp;https://www.acmicpc.net/user/asd990702
+      </div>
+    </div>
+    <div class="cover-contact">
+      <div><div class="cc-label">NAME</div><div class="cc-value">임대연 · Backend Engineer</div></div>
+      <div><div class="cc-label">EMAIL</div><div class="cc-value">eodos6480@gmail.com</div></div>
+    </div>
+  </div>
+  <div class="sn">12</div>
+</div>
+
+</div><!-- /deck -->
+
+<div class="ctrls">
+  <button class="btn" id="prevBtn" type="button" onclick="go(-1)">◀ 이전</button>
+  <div class="dots" id="dots"></div>
+  <div class="si"><span id="cur">1</span> / <span id="tot">12</span></div>
+  <button class="btn" id="nextBtn" type="button" onclick="go(1)">다음 ▶</button>
+  <button class="btn pdf" id="pdfBtn" type="button" onclick="savePDF()">PDF로 저장</button>
+</div>
+<div class="hint">방향키(← →)로 이동 · PDF로 저장 버튼으로 전체 12장 다운로드</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="assets/js/deck.js"></script>
+</body>
 </html>
