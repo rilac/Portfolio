@@ -221,10 +221,18 @@ body {
   position: absolute; inset: 0; z-index: 2; padding: 64px 76px;
   display: flex; flex-direction: column; justify-content: space-between;
 }
+.cover-mid { display: flex; align-items: center; gap: 54px; }
+.cover-copy { flex: 1; min-width: 0; }
+.cover-photo { flex: 0 0 206px; margin: 0; }
+.cover-photo img {
+  width: 206px; height: 266px; display: block; object-fit: cover; object-position: center 18%;
+  border-radius: 6px; border: 1px solid rgba(255, 255, 255, .22);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, .34);
+}
 .cv-label { font-family: var(--mono); font-size: 11px; letter-spacing: 5px; opacity: .6; }
 .cv-name { font-size: 62px; font-weight: 800; letter-spacing: -2px; line-height: 1.05; }
 .cv-role { font-size: 17px; font-weight: 600; color: #8FB6FF; margin-top: 10px; letter-spacing: .5px; }
-.cv-tag { font-size: 15px; line-height: 1.65; opacity: .82; margin-top: 18px; max-width: 720px; }
+.cv-tag { font-size: 15px; line-height: 1.65; opacity: .82; margin-top: 18px; }
 .cv-rule { width: 52px; height: 3px; background: var(--accent); margin-top: 22px; }
 .cover-contact { display: flex; gap: 34px; align-items: flex-end; }
 .cc-label { font-family: var(--mono); font-size: 9px; letter-spacing: 2px; opacity: .5; margin-bottom: 4px; }

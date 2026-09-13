@@ -30,6 +30,7 @@ assets/js/deck.js          슬라이드 네비게이션 · PDF 내보내기(html
 assets/img/shots/          프로젝트 실제 동작 화면 (1500px JPEG로 리사이즈)
 assets/img/diagrams/       아키텍처 다이어그램
 assets/img/tech/           기술 스택 아이콘 (devicon / simple-icons SVG)
+assets/img/profile.jpg     커버 프로필 사진
 screenshots/               원본 스크린샷 (배포 대상 아님 · .gitignore 대상 검토)
 지침/                       포트폴리오 작성 지침 · 참고 자료 (배포 대상 아님)
 ```
