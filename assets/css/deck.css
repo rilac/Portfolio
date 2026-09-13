@@ -127,6 +127,23 @@ body {
 .wb.result { border-color: #BBD0F4; }
 .wb.result .bt { background: var(--accent-dim); font-weight: 700; }
 
+/* 카드 내부 구조 라벨 — 텍스트가 아니라 칩으로 */
+.lb {
+  display: inline-block; margin-right: 6px; vertical-align: 1px;
+  font-family: var(--mono); font-size: 8.5px; font-weight: 800; letter-spacing: .5px;
+  color: #fff; background: #7A828E; padding: 1.5px 5px; border-radius: 3px;
+}
+.lb.fix { background: var(--accent); }
+.lb.why { background: var(--ink); }
+
+/* 강의 목록 — 풀 링크 노출 (출력물 전제) */
+.lecrow { display: flex; align-items: baseline; gap: 7px; padding: 2.5px 0; border-bottom: 1px solid var(--line-soft); }
+.lecrow:last-child { border-bottom: 0; }
+.lecno { font-family: var(--mono); font-size: 8.5px; font-weight: 800; color: #fff;
+  background: var(--accent); padding: 1.5px 5px; border-radius: 3px; flex-shrink: 0; }
+.lect { font-size: 10.5px; font-weight: 700; color: var(--head); flex-shrink: 0; }
+.lecu { font-family: var(--mono); font-size: 9px; color: var(--text-dim); margin-left: auto; }
+
 /* 역할 태그 (BE/FE/Infra) */
 .role { display: inline-flex; align-items: center; gap: 6px; margin: 5px 0 1px; }
 .role-tag {
