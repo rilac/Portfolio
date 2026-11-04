@@ -293,3 +293,16 @@ body {
   .deck { box-shadow: none; }
   .slide { position: relative; opacity: 1 !important; pointer-events: auto; page-break-after: always; }
 }
+
+/* ── 각주 · 깨달은 점 ───────────────────────────────────────────── */
+.fn { font-size: 9px; line-height: 1.45; color: var(--text-dim); margin-top: 4px; }
+.learn { border-left: 4px solid var(--accent); background: var(--paper); border-radius: 4px;
+  padding: 7px 11px; font-size: 11px; line-height: 1.5; color: var(--text); flex-shrink: 0; }
+.learn b { color: var(--head); font-weight: 800; margin-right: 6px; }
+.stepn { font-family: var(--mono); font-weight: 800; color: var(--accent); margin-right: 3px; }
+
+/* 내용이 짧은 슬라이드용 본문 확대 */
+.big .ct, .big .bi { font-size: 12.6px; line-height: 1.68; }
+.big .bi code, .big code.k { font-size: 11px; }
+.big2 .bi { font-size: 13.6px; line-height: 1.78; margin: 6px 0; }
+.big2 .bi code, .big2 code.k { font-size: 12px; }
